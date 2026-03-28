@@ -5,9 +5,9 @@ private:
   std::string label;
 
 public:
-  Setting(std::string label);
-  Setting(std::string label, T v);
-  T getValue();
-  std::string getLabel();
-  void setSetting(T v);
+  Setting(std::string label) : label(label) {};
+  Setting(std::string label, T v) : label(label), value(v) {};
+  T getValue() { return value; };
+  std::string getLabel() { return label; };
+  void setSetting(T v) { value = v; };
 };
