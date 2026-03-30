@@ -1,6 +1,6 @@
 #include "sortingMachine.hpp"
-template <typename T> void SortingMachine<T>::insertSort(T *arr, int n) {
-  for (int i = 1; i < n; i++) {
+template <typename T> void SortingMachine<T>::insertSort(T *arr, int len) {
+  for (int i = 1; i < len; i++) {
     int val = &arr[i];
     int j = i - 1;
 

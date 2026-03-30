@@ -21,9 +21,11 @@ public:
     for (int i = 0; i < arrayLen; i++) {
       array[i] = rand();
     };
-
+    for (int i = 0; i < 100; i++) {
+      std::cout << array[i] << std::endl;
+    }
     return array;
-    // TBT
+    // TESTED: IT WORKS BUT I NEED TO KEEP TRACK OF THE ARRAY LEN
   };
 
   T *readArrayFromFile() {
