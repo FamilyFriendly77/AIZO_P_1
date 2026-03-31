@@ -1,6 +1,7 @@
 #include "dataUtility.hpp"
 #include "sortingMachine.hpp"
 #include "testingUtility.hpp"
+#include <iostream>
 class Main {
 public:
   SortingMachine<int> sorter = SortingMachine<int>();
@@ -12,11 +13,13 @@ int main(int argc, char *argv[]) {
   if (argc == 2) {
     Config::setConfigFile(argv[1]);
   } else {
-    Config::setConfigFile("Config.JSON");
+    Config::setConfigFile("config.JSON");
   }
 
   int *arr = dataUtil.readArrayFromFile();
   testingUtil.testSortingTime(sorter.insertSort, arr,
                               Config::testArrayLen.getValue());
+  Config::loadConfigFromFile();
+  std::cout << Config::randomSeed.getValue();
   return 0;
 };

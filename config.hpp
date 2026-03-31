@@ -11,7 +11,7 @@ public:
   static Setting<std::string> testFilename;
   static Setting<int> testArrayLen;
   static Setting<int> testRepetitionCounter;
-  static Setting<std::string> sortingAlg;
+  static Setting<std::string> testSortingAlg;
   static Setting<bool> printAfterGenerating;
   static Setting<bool> printAfterSorting;
   static void loadConfigFromFile();
