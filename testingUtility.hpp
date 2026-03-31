@@ -1,16 +1,21 @@
 #include <chrono>
-#include <cstring>
-#include <functional>
 template <typename T> class TestingUtility {
 private:
-  int repetitionsCounter;
+  int repetitionsCounter = 1;
 
 public:
   void setRepetitionsCounter(int counter) { repetitionsCounter = counter; };
-  void testSortingTime(std::function<void(T *, int)> sort, T *arr, int arrLen) {
+  template <typename Func> void testSortingTime(Func sort, T *arr, int arrLen) {
+    std::chrono::duration<double> total_time(0);
     for (int i = 0; i < repetitionsCounter; i++) {
-      T *arrCpy;
-      std::memcpy(arrCpy, arr, sizeof(arr));
+      T *arrCpy = (T *)malloc(sizeof(T) * arrLen);
+      std::memcpy(arrCpy, arr, sizeof(T) * arrLen);
+      auto start = std::chrono::high_resolution_clock::now();
+      sort(arrCpy, arrLen);
+      auto end = std::chrono::high_resolution_clock::now();
+      total_time += (end - start);
     }
+    double averageSeconds = total_time.count() / repetitionsCounter;
+    std::cout << averageSeconds / repetitionsCounter;
   };
 };
