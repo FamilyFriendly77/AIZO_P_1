@@ -1,6 +1,6 @@
 #include "config.hpp"
 #include <fstream>
-
+#include <iostream>
 using json = nlohmann::json;
 
 Setting<unsigned int> Config::randomSeed =
@@ -28,6 +28,11 @@ void Config::setConfigFile(std::string filename) {
 }
 void Config::loadConfigFromFile() {
   std::ifstream f(Config::configFile.getValue());
+  // checking if file opens, if not, throw an error because it can't be read
+  if (!f.is_open()) {
+    throw std::runtime_error(
+        "Specified config file does not exits or can't be opened");
+  }
   json config = json::parse(f);
   randomSeed.setSetting(config[randomSeed.getLabel()]);
   inTestMode.setSetting(config[inTestMode.getLabel()]);
