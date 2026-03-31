@@ -32,15 +32,19 @@ public:
     // checking if the first line containing array len exists, if not array
     // can't be read
     if (!std::getline(testFile, buff)) {
+      std::cout << "Can't read data from file "
+                << Config::testFilename.getValue() << std::endl;
       return NULL;
     }
-    std::cout << buff;
+    std::cout << buff << std::endl;
     int length = std::stoi(buff);
     array = (T *)malloc(length * (sizeof(T)));
     for (int i = 0; i < length; i++) {
       std::getline(testFile, buff);
+      std::cout << buff << std::endl;
       array[i] = std::stoi(buff);
     }
     // TBF && TBT
+    return array;
   };
 };

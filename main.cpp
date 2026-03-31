@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     Config::setConfigFile("Config.JSON");
   }
 
-  int *arr = dataUtil.generateRandomArray();
+  int *arr = dataUtil.readArrayFromFile();
   testingUtil.testSortingTime(sorter.insertSort, arr,
                               Config::testArrayLen.getValue());
   return 0;
