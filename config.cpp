@@ -26,6 +26,8 @@ Setting<std::string> Config::testSortingAlg =
 void Config::setConfigFile(std::string filename) {
   configFile.setSetting(filename);
 }
+Setting<PivotStrategy> Config::quickSortPivot =
+    Setting<PivotStrategy>("quickSortPivot");
 void Config::loadConfigFromFile() {
   std::ifstream f(Config::configFile.getValue());
   // checking if file opens, if not, throw an error because it can't be read
@@ -41,4 +43,14 @@ void Config::loadConfigFromFile() {
   testRepetitionCounter.setSetting(config[testRepetitionCounter.getLabel()]);
   printAfterSorting.setSetting(config[printAfterSorting.getLabel()]);
   printAfterGenerating.setSetting(config[printAfterGenerating.getLabel()]);
+
+  if (config[quickSortPivot.getLabel()] == "FIRST") {
+    quickSortPivot.setSetting(FIRST);
+  } else if (config[quickSortPivot.getLabel()] == "LAST") {
+    quickSortPivot.setSetting(LAST);
+  } else if (config[quickSortPivot.getLabel()] == "MIDDLE") {
+    quickSortPivot.setSetting(MIDDLE);
+  } else if (config[quickSortPivot.getLabel()] == "RANDOM") {
+    quickSortPivot.setSetting(RANDOM);
+  }
 }

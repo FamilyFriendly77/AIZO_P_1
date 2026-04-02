@@ -38,6 +38,7 @@ public:
     }
     std::cout << buff << std::endl;
     int length = std::stoi(buff);
+    Config::testArrayLen.setSetting(length);
     array = (T *)malloc(length * (sizeof(T)));
     for (int i = 0; i < length; i++) {
       std::getline(testFile, buff);

@@ -1,10 +1,13 @@
+#include "config.hpp"
 #include <chrono>
 #include <cstdlib>
 #include <cstring>
 #include <stdexcept>
 template <typename T> class TestingUtility {
 private:
-  int repetitionsCounter = 1;
+  int repetitionsCounter = Config::testRepetitionCounter.getValue()
+                               ? Config::testRepetitionCounter.getValue()
+                               : 100;
 
 public:
   void setRepetitionsCounter(int counter) { repetitionsCounter = counter; };
