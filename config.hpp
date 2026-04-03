@@ -18,6 +18,7 @@ public:
   static Setting<bool> printAfterGenerating;
   static Setting<bool> printAfterSorting;
   static Setting<PivotStrategy> quickSortPivot;
+
   static void loadConfigFromFile();
   static void setConfigFile(std::string filename);
 };

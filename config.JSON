@@ -7,4 +7,5 @@
     "printAfterSorting": true,
     "printAfterGenerating": true,
     "testSortingAlg": "insert"
+
   }

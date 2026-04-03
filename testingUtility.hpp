@@ -2,6 +2,7 @@
 #include <chrono>
 #include <cstdlib>
 #include <cstring>
+#include <iostream>
 #include <stdexcept>
 template <typename T> class TestingUtility {
 private:
@@ -27,6 +28,11 @@ public:
       auto start = std::chrono::high_resolution_clock::now();
       sort(arrCpy, arrLen);
       auto end = std::chrono::high_resolution_clock::now();
+      if (Config::printAfterSorting.getValue()) {
+        for (int i = 0; i < arrLen; i++) {
+          std::cout << arrCpy[i];
+        }
+      }
       total_time += (end - start);
     }
     double averageSeconds = total_time.count() / repetitionsCounter;

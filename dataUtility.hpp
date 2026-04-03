@@ -17,13 +17,33 @@ public:
   void setArrayLen(int len) { arrayLen = len; };
   T *generateRandomArray() {
     T *array;
-    array = (T *)malloc(arrayLen * (sizeof(T)));
+    array = (T *)malloc(arrayLen * sizeof(T));
     for (int i = 0; i < arrayLen; i++) {
       array[i] = rand();
     };
+    if (Config::printAfterSorting.getValue()) {
+      for (int i = 0; i < arrayLen; i++) {
+        std::cout << array[i];
+      }
+    }
+
     return array;
-    // TESTED: IT WORKS BUT I NEED TO KEEP TRACK OF THE ARRAY LEN
   };
+
+  T *generatePartialySortedArray(double sortedPart) {
+    T *array;
+    array = (T *)malloc(arrayLen * sizeof(T));
+    int sortedLen = int(sortedPart * arrayLen);
+    memset(array, 0, sortedLen * sizeof(T));
+    for (int i = sortedLen + 1; i < arrayLen; i++) {
+      array[i] = rand();
+    }
+    if (Config::printAfterSorting.getValue()) {
+      for (int i = 0; i < arrayLen; i++) {
+        std::cout << array[i];
+      }
+    }
+  }
 
   T *readArrayFromFile() {
     T *array;
@@ -36,16 +56,21 @@ public:
                 << Config::testFilename.getValue() << std::endl;
       return NULL;
     }
-    std::cout << buff << std::endl;
     int length = std::stoi(buff);
+    arrayLen = length;
     Config::testArrayLen.setSetting(length);
+
     array = (T *)malloc(length * (sizeof(T)));
     for (int i = 0; i < length; i++) {
       std::getline(testFile, buff);
-      std::cout << buff << std::endl;
       array[i] = std::stoi(buff);
     }
-    // TBF && TBT
+    if (Config::printAfterSorting.getValue()) {
+      for (int i = 0; i < length; i++) {
+        std::cout << array[i];
+      }
+    }
+
     return array;
   };
 };

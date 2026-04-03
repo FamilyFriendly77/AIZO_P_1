@@ -1,5 +1,6 @@
+#ifndef SORTINGMACHINE_HPP
+#define SORTINGMACHINE_HPP
 #include <algorithm>
-#include <string>
 enum PivotStrategy { FIRST, LAST, MIDDLE, RANDOM };
 
 template <typename T> class SortingMachine {
@@ -57,3 +58,4 @@ public:
   }
   void shellSort(T *arr);
 };
+#endif
