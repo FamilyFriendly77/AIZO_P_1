@@ -3,7 +3,6 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#define RAND_MAX INT_MAX
 
 template <typename T> class DataUtility {
 private:
@@ -21,10 +20,14 @@ public:
     for (int i = 0; i < arrayLen; i++) {
       array[i] = rand();
     };
-    if (Config::printAfterSorting.getValue()) {
+    if (Config::printAfterGenerating.getValue()) {
+      std::cout << "------------------------" << std::endl;
+      std::cout << "GENERATED ARRAY:" << std::endl;
+      ;
       for (int i = 0; i < arrayLen; i++) {
-        std::cout << array[i];
+        std::cout << array[i] << std::endl;
       }
+      std::cout << "------------------------" << std::endl;
     }
 
     return array;
@@ -33,42 +36,52 @@ public:
   T *generatePartialySortedArray(double sortedPart) {
     T *array;
     array = (T *)malloc(arrayLen * sizeof(T));
+    // calc length of sorted part and set this part of an array to 0s
     int sortedLen = int(sortedPart * arrayLen);
     memset(array, 0, sortedLen * sizeof(T));
+    // creating rest of the array - random
     for (int i = sortedLen + 1; i < arrayLen; i++) {
-      array[i] = rand();
+      array[i] = (rand() % RAND_MAX) + 1;
     }
-    if (Config::printAfterSorting.getValue()) {
+    if (Config::printAfterGenerating.getValue()) {
+      std::cout << "------------------------" << std::endl;
+      std::cout << "GENERATED ARRAY:" << std::endl;
       for (int i = 0; i < arrayLen; i++) {
         std::cout << array[i];
       }
+      std::cout << "------------------------" << std::endl;
     }
+    return array;
   }
 
   T *readArrayFromFile() {
     T *array;
     std::ifstream testFile(Config::testFilename.getValue());
     std::string buff;
-    // checking if the first line containing array len exists, if not array
-    // can't be read
+    // checking if the first line containing array len exists,
+    // if not array can't be read
     if (!std::getline(testFile, buff)) {
       std::cout << "Can't read data from file "
                 << Config::testFilename.getValue() << std::endl;
       return NULL;
     }
+    // setting read length in config and in dataUtil class
     int length = std::stoi(buff);
     arrayLen = length;
     Config::testArrayLen.setSetting(length);
-
+    // reading the array
     array = (T *)malloc(length * (sizeof(T)));
     for (int i = 0; i < length; i++) {
       std::getline(testFile, buff);
       array[i] = std::stoi(buff);
     }
-    if (Config::printAfterSorting.getValue()) {
+    if (Config::printAfterGenerating.getValue()) {
+      std::cout << "------------------------" << std::endl;
+      std::cout << "READ ARRAY:" << std::endl;
       for (int i = 0; i < length; i++) {
         std::cout << array[i];
       }
+      std::cout << "------------------------" << std::endl;
     }
 
     return array;

@@ -1,7 +1,7 @@
 #ifndef SORTINGMACHINE_HPP
 #define SORTINGMACHINE_HPP
+#include "config.hpp"
 #include <algorithm>
-enum PivotStrategy { FIRST, LAST, MIDDLE, RANDOM };
 
 template <typename T> class SortingMachine {
 public:
@@ -18,7 +18,8 @@ public:
     }
   }
   void heapSort(T *arr);
-  void quickSort(T *arr, int len, PivotStrategy pivotStrat) {
+  static void quickSort(T *arr, int len) {
+    PivotStrategy pivotStrat = Config::quickSortPivot.getValue();
     int pIndex;
     switch (pivotStrat) {
     case FIRST:
@@ -53,8 +54,8 @@ public:
       }
     }
     std::swap(arr[i], arr[len - 1]);
-    quickSort(arr, i, pivotStrat);
-    quickSort(arr + i + 1, len - i - 1, pivotStrat);
+    quickSort(arr, i);
+    quickSort(arr + i + 1, len - i - 1);
   }
   void shellSort(T *arr);
 };

@@ -1,11 +1,12 @@
 {
     "randomSeed" : 6942067,
     "testMode" : false,
-    "testFilename" : "texts.txt",
-    "testArrayLen" : 1000,
-    "testRepetitionCounter": 100,
+    "testFilename" : "tests.txt",
+    "testArrayLen" : 10,
+    "testRepetitionCounter": 10,
+    "printBeforeSorting": true,
     "printAfterSorting": true,
     "printAfterGenerating": true,
-    "testSortingAlg": "insert"
-
+    "testSortingAlg": "insert",
+    "testIfSorted": true
   }
