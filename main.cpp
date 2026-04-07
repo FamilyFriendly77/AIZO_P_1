@@ -16,12 +16,13 @@ int main(int argc, char *argv[]) {
   Config::loadConfigFromFile();
   DataUtility<int> dataUtil = DataUtility<int>();
   SortingMachine<int> sorter = SortingMachine<int>();
-  TestingUtility<int> testingUtil = TestingUtility<int>();
+  TestingUtility<int> testingUtil = TestingUtility<int>(dataUtil);
   std::cout << "Random data generator max value: " << RAND_MAX << std::endl;
-  for (int i = 0; i < Config::testRepetitionCounter.getValue(); i++) {
-    int *arr = dataUtil.generateRandomArray();
-    testingUtil.testSortingTime(sorter.quickSort, arr,
+  for (int i = 0; i < 2; i++) {
+    testingUtil.testSortingTime(sorter.quickSort,
                                 Config::testArrayLen.getValue());
+  }
+  while (true) {
   }
   return 0;
 };

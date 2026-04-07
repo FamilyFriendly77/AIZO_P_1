@@ -3,7 +3,8 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-
+#ifndef DATAUTILITY_HPP
+#define DATAUTILITY_HPP
 template <typename T> class DataUtility {
 private:
   int arrayLen;
@@ -11,9 +12,13 @@ private:
 public:
   DataUtility<T>() {
     arrayLen = Config::testArrayLen.getValue();
-    unsigned int randomSeed = Config::randomSeed.getValue();
+    srand(Config::randomSeed.getValue());
   };
   void setArrayLen(int len) { arrayLen = len; };
+  // setting the seed value again even on the same object will give the same
+  // results, that's desired behavior since we want to test all algs on the same
+  // data
+  void setSeed() { srand(Config::randomSeed.getValue()); }
   T *generateRandomArray() {
     T *array;
     array = (T *)malloc(arrayLen * sizeof(T));
@@ -87,3 +92,4 @@ public:
     return array;
   };
 };
+#endif

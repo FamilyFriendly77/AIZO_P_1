@@ -46,22 +46,26 @@ void Config::loadConfigFromFile() {
     std::cerr << "Something went wrong while parsing config!!!";
     return;
   }
-  randomSeed.setSetting(config[randomSeed.getLabel()]);
-  inTestMode.setSetting(config[inTestMode.getLabel()]);
-  testFilename.setSetting(config[testFilename.getLabel()]);
-  testArrayLen.setSetting(config[testArrayLen.getLabel()]);
-  testRepetitionCounter.setSetting(config[testRepetitionCounter.getLabel()]);
-  printAfterSorting.setSetting(config[printAfterSorting.getLabel()]);
-  printBeforeSorting.setSetting(config[printBeforeSorting.getLabel()]);
-  printAfterGenerating.setSetting(config[printAfterGenerating.getLabel()]);
-  testIfSorted.setSetting(config[testIfSorted.getLabel()]);
-  if (config[quickSortPivot.getLabel()] == "FIRST") {
+  randomSeed.setSetting(config.value(randomSeed.getLabel(), NULL));
+  inTestMode.setSetting(config.value(inTestMode.getLabel(), NULL));
+  testFilename.setSetting(config.value(testFilename.getLabel(), ""));
+  testArrayLen.setSetting(config.value(testArrayLen.getLabel(), NULL));
+  testRepetitionCounter.setSetting(
+      config.value(testRepetitionCounter.getLabel(), NULL));
+  printAfterSorting.setSetting(
+      config.value(printAfterSorting.getLabel(), NULL));
+  printBeforeSorting.setSetting(
+      config.value(printBeforeSorting.getLabel(), NULL));
+  printAfterGenerating.setSetting(
+      config.value(printAfterGenerating.getLabel(), NULL));
+  testIfSorted.setSetting(config.value(testIfSorted.getLabel(), NULL));
+  if (config.value(quickSortPivot.getLabel(), "FIRST") == "FIRST") {
     quickSortPivot.setSetting(FIRST);
-  } else if (config[quickSortPivot.getLabel()] == "LAST") {
+  } else if (config.value(quickSortPivot.getLabel(), "") == "LAST") {
     quickSortPivot.setSetting(LAST);
-  } else if (config[quickSortPivot.getLabel()] == "MIDDLE") {
+  } else if (config.value(quickSortPivot.getLabel(), "") == "MIDDLE") {
     quickSortPivot.setSetting(MIDDLE);
-  } else if (config[quickSortPivot.getLabel()] == "RANDOM") {
+  } else if (config.value(quickSortPivot.getLabel(), "") == "RANDOM") {
     quickSortPivot.setSetting(RANDOM);
   }
   std::cout << "Succesfully loaded config from "

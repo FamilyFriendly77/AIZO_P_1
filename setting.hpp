@@ -9,5 +9,8 @@ public:
   Setting(std::string label, T v) : label(label), value(v) {};
   T getValue() { return value; };
   std::string getLabel() { return label; };
-  void setSetting(T v) { value = v; };
+  void setSetting(T v) {
+    if (value != NULL and value != "")
+      value = v;
+  };
 };
