@@ -18,8 +18,10 @@ int main(int argc, char *argv[]) {
   SortingMachine<int> sorter = SortingMachine<int>();
   TestingUtility<int> testingUtil = TestingUtility<int>();
   std::cout << "Random data generator max value: " << RAND_MAX << std::endl;
-  int *arr = dataUtil.generateRandomArray();
-  testingUtil.testSortingTime(sorter.quickSort, arr,
-                              Config::testArrayLen.getValue());
+  for (int i = 0; i < Config::testRepetitionCounter.getValue(); i++) {
+    int *arr = dataUtil.generateRandomArray();
+    testingUtil.testSortingTime(sorter.quickSort, arr,
+                                Config::testArrayLen.getValue());
+  }
   return 0;
 };
