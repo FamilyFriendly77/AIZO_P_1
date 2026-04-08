@@ -11,10 +11,11 @@ private:
 
 public:
   DataUtility<T>() {
-    arrayLen = Config::testArrayLen.getValue();
+    arrayLen = Config::generatedArrayLen.getValue();
     srand(Config::randomSeed.getValue());
   };
   void setArrayLen(int len) { arrayLen = len; };
+  int getArrayLen() { return arrayLen; };
   // setting the seed value again even on the same object will give the same
   // results, that's desired behavior since we want to test all algs on the same
   // data
@@ -73,14 +74,14 @@ public:
     // setting read length in config and in dataUtil class
     int length = std::stoi(buff);
     arrayLen = length;
-    Config::testArrayLen.setSetting(length);
     // reading the array
     array = (T *)malloc(length * (sizeof(T)));
     for (int i = 0; i < length; i++) {
       std::getline(testFile, buff);
       array[i] = std::stoi(buff);
     }
-    if (Config::printAfterGenerating.getValue()) {
+    if (Config::printAfterGenerating.getValue() ||
+        Config::inTestMode.getValue()) {
       std::cout << "------------------------" << std::endl;
       std::cout << "READ ARRAY:" << std::endl;
       for (int i = 0; i < length; i++) {

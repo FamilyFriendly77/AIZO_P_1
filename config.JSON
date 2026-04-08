@@ -4,7 +4,6 @@
     "testFilename" : "tests.txt",
     "testArrayLen" : 10,
     "testRepetitionCounter": 1,
-    "printBeforeSorting": true,
     "printAfterSorting": true,
     "printAfterGenerating": true,
     "testSortingAlg": "insert",

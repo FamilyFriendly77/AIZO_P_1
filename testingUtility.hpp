@@ -10,38 +10,32 @@ private:
                                : 100;
 
 public:
-  DataUtility<T> dataUtil;
-  TestingUtility(DataUtility<T> dataUtil) : dataUtil(dataUtil) {}
+  DataUtility<T> dataUtil = DataUtility<T>();
   void setRepetitionsCounter(int counter) { repetitionsCounter = counter; };
 
   // returns average sorting time for specific array and specific alg
-  double testSortingTime(void (*sort)(T *, int), int arrLen) {
+  double testSortingTime(void (*sort)(T *, int)) {
     std::chrono::duration<double> result(0);
     for (int i = 0; i < repetitionsCounter; i++) {
-      T *arr = dataUtil.generateRandomArray();
-      // creating copy of an array to be sorted for every repetition of
-      // benchmark
-      std::cout << "===============================" << std::endl;
-      if (Config::printBeforeSorting.getValue()) {
-        std::cout << "COPIED ARRAY:" << std::endl;
-        for (int i = 0; i < arrLen; i++) {
-
-          std::cout << arr[i] << std::endl;
-        }
-      }
+      T *arr;
+      if (Config::inTestMode.getValue())
+        arr = dataUtil.readArrayFromFile();
+      else
+        arr = dataUtil.generateRandomArray();
       // benchmark
       auto start = std::chrono::high_resolution_clock::now();
-      sort(arr, arrLen);
+      sort(arr, dataUtil.getArrayLen());
       auto end = std::chrono::high_resolution_clock::now();
-      if (Config::printAfterSorting.getValue()) {
+      if (Config::printAfterSorting.getValue() ||
+          Config::inTestMode.getValue()) {
         std::cout << "SORTED ARRAY:" << std::endl;
-        for (int i = 0; i < arrLen; i++) {
+        for (int i = 0; i < dataUtil.getArrayLen(); i++) {
 
           std::cout << arr[i] << std::endl;
         }
       }
       if (Config::testIfSorted.getValue()) {
-        if (isSorted(arr, arrLen)) {
+        if (isSorted(arr, dataUtil.getArrayLen())) {
           std::cout << "Sorting was successful!" << std::endl;
         } else {
           std::cout << "Somethig went wrong while sorting!" << std::endl;

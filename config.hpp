@@ -12,7 +12,7 @@ public:
   static Setting<unsigned int> randomSeed;
   static Setting<bool> inTestMode;
   static Setting<std::string> testFilename;
-  static Setting<int> testArrayLen;
+  static Setting<int> generatedArrayLen;
   static Setting<int> testRepetitionCounter;
   static Setting<std::string> testSortingAlg;
   static Setting<bool> printAfterGenerating;

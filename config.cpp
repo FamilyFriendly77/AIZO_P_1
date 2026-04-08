@@ -12,7 +12,8 @@ Setting<bool> Config::inTestMode = Setting<bool>("testMode", false);
 Setting<std::string> Config::testFilename =
     Setting<std::string>("testFilename", "tests.txt");
 
-Setting<int> Config::testArrayLen = Setting<int>("testArrayLen", 10000);
+Setting<int> Config::generatedArrayLen =
+    Setting<int>("generatedArrayLen", 10000);
 
 Setting<std::string> Config::configFile =
     Setting<std::string>("configFilename");
@@ -20,8 +21,7 @@ Setting<int> Config::testRepetitionCounter =
     Setting<int>("testRepetitionCounter", 100);
 Setting<bool> Config::printAfterSorting =
     Setting<bool>("printAfterSorting", true);
-Setting<bool> Config::printBeforeSorting =
-    Setting<bool>("printBeforeSorting", true);
+
 Setting<bool> Config::printAfterGenerating =
     Setting<bool>("printAfterGenerating", true);
 Setting<std::string> Config::testSortingAlg =
@@ -49,13 +49,12 @@ void Config::loadConfigFromFile() {
   randomSeed.setSetting(config.value(randomSeed.getLabel(), NULL));
   inTestMode.setSetting(config.value(inTestMode.getLabel(), NULL));
   testFilename.setSetting(config.value(testFilename.getLabel(), ""));
-  testArrayLen.setSetting(config.value(testArrayLen.getLabel(), NULL));
+  generatedArrayLen.setSetting(
+      config.value(generatedArrayLen.getLabel(), NULL));
   testRepetitionCounter.setSetting(
       config.value(testRepetitionCounter.getLabel(), NULL));
   printAfterSorting.setSetting(
       config.value(printAfterSorting.getLabel(), NULL));
-  printBeforeSorting.setSetting(
-      config.value(printBeforeSorting.getLabel(), NULL));
   printAfterGenerating.setSetting(
       config.value(printAfterGenerating.getLabel(), NULL));
   testIfSorted.setSetting(config.value(testIfSorted.getLabel(), NULL));

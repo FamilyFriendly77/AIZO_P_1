@@ -14,15 +14,13 @@ int main(int argc, char *argv[]) {
     Config::setConfigFile("config.JSON");
   }
   Config::loadConfigFromFile();
-  DataUtility<int> dataUtil = DataUtility<int>();
   SortingMachine<int> sorter = SortingMachine<int>();
-  TestingUtility<int> testingUtil = TestingUtility<int>(dataUtil);
+  TestingUtility<int> testingUtil = TestingUtility<int>();
+  testingUtil.testSortingTime(sorter.insertSort);
   std::cout << "Random data generator max value: " << RAND_MAX << std::endl;
   for (int i = 0; i < 2; i++) {
-    testingUtil.testSortingTime(sorter.quickSort,
-                                Config::testArrayLen.getValue());
+    testingUtil.testSortingTime(sorter.quickSort);
   }
-  while (true) {
-  }
+
   return 0;
 };
