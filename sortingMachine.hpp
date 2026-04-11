@@ -17,7 +17,25 @@ public:
       arr[j + 1] = val;
     }
   }
-  void heapSort(T *arr);
+  void heapify(T *arr, int len, int index) {
+    int left = index * 2 + 1;
+    int right = index * 2 + 2;
+    int newRootI = index;
+    if (arr[index] > arr[left] && arr[index] > arr[right]) {
+      return;
+    }
+    if (left < len && arr[left] > arr[newRootI]) {
+      newRootI = left;
+    }
+    if (right < len && arr[right] > arr[newRootI]) {
+      newRootI = right;
+    }
+    if (newRootI != index) {
+      std::swap(arr[index], arr[newRootI]);
+      heapify(arr, len, newRootI);
+    }
+  }
+  void heapSort(T *arr, int len) {}
   static void quickSort(T *arr, int len) {
     PivotStrategy pivotStrat = Config::quickSortPivot.getValue();
     int pIndex;
