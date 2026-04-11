@@ -16,11 +16,40 @@ int main(int argc, char *argv[]) {
   Config::loadConfigFromFile();
   SortingMachine<int> sorter = SortingMachine<int>();
   TestingUtility<int> testingUtil = TestingUtility<int>();
-  testingUtil.testSortingTime(sorter.insertSort);
-  std::cout << "Random data generator max value: " << RAND_MAX << std::endl;
-  for (int i = 0; i < 2; i++) {
-    testingUtil.testSortingTime(sorter.quickSort);
+  DataUtility<int> dataUtil = DataUtility<int>();
+  double insertTimesSum;
+  double heapTimesSum;
+  double quickTimesSum;
+  double shellTimesSum;
+  std::vector<double> insertAvgTimes;
+  std::vector<double> heapAvgTimes;
+  std::vector<double> quickAvgTimes;
+  std::vector<double> shellAvgTimes;
+  if (Config::inTestMode.getValue()) {
+    // READING ARRAY FROM FILE AND TESTING ALL ALGS
+  } else {
+    int *arr;
+    for (int i = 0; i < Config::testCasesArrayLengths.getValue().size(); i++) {
+      dataUtil.setArrayLen(Config::testCasesArrayLengths.getValue().at(i));
+      quickTimesSum = 0.0;
+      insertTimesSum = 0.0;
+      heapTimesSum = 0.0;
+      shellTimesSum = 0.0;
+      for (int j = 0; j < Config::testRepetitionCounter.getValue(); j++) {
+        arr = dataUtil.generateRandomArray();
+        quickTimesSum += testingUtil.testSortingTime(sorter.quickSort, arr,
+                                                     dataUtil.getArrayLen());
+        insertTimesSum += testingUtil.testSortingTime(sorter.insertSort, arr,
+                                                      dataUtil.getArrayLen());
+      }
+      quickAvgTimes.push_back(quickTimesSum /
+                              Config::testRepetitionCounter.getValue());
+      insertAvgTimes.push_back(insertTimesSum /
+                               Config::testRepetitionCounter.getValue());
+    }
   }
+
+  std::cout << "Random data generator max value: " << RAND_MAX << std::endl;
 
   return 0;
 };

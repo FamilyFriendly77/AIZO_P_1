@@ -1,32 +1,31 @@
 #include "config.hpp"
+#include <cstddef>
 #include <exception>
 #include <fstream>
 #include <iostream>
 using json = nlohmann::json;
 
-Setting<unsigned int> Config::randomSeed =
-    Setting<unsigned int>("randomSeed", 123445856);
+Setting<unsigned int> Config::randomSeed = Setting<unsigned int>("randomSeed");
 
-Setting<bool> Config::inTestMode = Setting<bool>("testMode", false);
+Setting<bool> Config::inTestMode = Setting<bool>("testMode");
 
 Setting<std::string> Config::testFilename =
     Setting<std::string>("testFilename", "tests.txt");
 
-Setting<int> Config::generatedArrayLen =
-    Setting<int>("generatedArrayLen", 10000);
+Setting<std::vector<int>> Config::testCasesArrayLengths =
+    Setting<std::vector<int>>("testCasesArrayLengths");
 
 Setting<std::string> Config::configFile =
     Setting<std::string>("configFilename");
 Setting<int> Config::testRepetitionCounter =
-    Setting<int>("testRepetitionCounter", 100);
-Setting<bool> Config::printAfterSorting =
-    Setting<bool>("printAfterSorting", true);
+    Setting<int>("testRepetitionCounter");
+Setting<bool> Config::printAfterSorting = Setting<bool>("printAfterSorting");
 
 Setting<bool> Config::printAfterGenerating =
-    Setting<bool>("printAfterGenerating", true);
+    Setting<bool>("printAfterGenerating");
 Setting<std::string> Config::testSortingAlg =
     Setting<std::string>("testSortingAlg");
-Setting<bool> Config::testIfSorted = Setting<bool>("testIfSorted", false);
+Setting<bool> Config::testIfSorted = Setting<bool>("testIfSorted");
 void Config::setConfigFile(std::string filename) {
   configFile.setSetting(filename);
 }
@@ -46,18 +45,18 @@ void Config::loadConfigFromFile() {
     std::cerr << "Something went wrong while parsing config!!!";
     return;
   }
-  randomSeed.setSetting(config.value(randomSeed.getLabel(), NULL));
-  inTestMode.setSetting(config.value(inTestMode.getLabel(), NULL));
-  testFilename.setSetting(config.value(testFilename.getLabel(), ""));
-  generatedArrayLen.setSetting(
-      config.value(generatedArrayLen.getLabel(), NULL));
+  randomSeed.setSetting(config.value(randomSeed.getLabel(), 123456));
+  inTestMode.setSetting(config.value(inTestMode.getLabel(), true));
+  testFilename.setSetting(config.value(testFilename.getLabel(), "test.txt"));
+  testCasesArrayLengths.setSetting(
+      config.value(testCasesArrayLengths.getLabel(), std::vector<int>{}));
   testRepetitionCounter.setSetting(
-      config.value(testRepetitionCounter.getLabel(), NULL));
+      config.value(testRepetitionCounter.getLabel(), 100));
   printAfterSorting.setSetting(
-      config.value(printAfterSorting.getLabel(), NULL));
+      config.value(printAfterSorting.getLabel(), true));
   printAfterGenerating.setSetting(
-      config.value(printAfterGenerating.getLabel(), NULL));
-  testIfSorted.setSetting(config.value(testIfSorted.getLabel(), NULL));
+      config.value(printAfterGenerating.getLabel(), true));
+  testIfSorted.setSetting(config.value(testIfSorted.getLabel(), true));
   if (config.value(quickSortPivot.getLabel(), "FIRST") == "FIRST") {
     quickSortPivot.setSetting(FIRST);
   } else if (config.value(quickSortPivot.getLabel(), "") == "LAST") {

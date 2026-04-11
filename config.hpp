@@ -3,6 +3,7 @@
 #include "nlohmann/json.hpp"
 #include "setting.hpp"
 #include <string>
+#include <vector>
 enum PivotStrategy { FIRST, LAST, MIDDLE, RANDOM };
 class Config {
 private:
@@ -12,7 +13,7 @@ public:
   static Setting<unsigned int> randomSeed;
   static Setting<bool> inTestMode;
   static Setting<std::string> testFilename;
-  static Setting<int> generatedArrayLen;
+  static Setting<std::vector<int>> testCasesArrayLengths;
   static Setting<int> testRepetitionCounter;
   static Setting<std::string> testSortingAlg;
   static Setting<bool> printAfterGenerating;

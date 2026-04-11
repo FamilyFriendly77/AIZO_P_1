@@ -10,20 +10,18 @@ private:
   int arrayLen;
 
 public:
-  DataUtility<T>() {
-    arrayLen = Config::generatedArrayLen.getValue();
-    srand(Config::randomSeed.getValue());
-  };
+  DataUtility<T>() { srand(Config::randomSeed.getValue()); };
   void setArrayLen(int len) { arrayLen = len; };
   int getArrayLen() { return arrayLen; };
   // setting the seed value again even on the same object will give the same
   // results, that's desired behavior since we want to test all algs on the same
   // data
-  void setSeed() { srand(Config::randomSeed.getValue()); }
+
   T *generateRandomArray() {
     T *array;
     array = (T *)malloc(arrayLen * sizeof(T));
     for (int i = 0; i < arrayLen; i++) {
+      // tbc
       array[i] = rand();
     };
     if (Config::printAfterGenerating.getValue()) {

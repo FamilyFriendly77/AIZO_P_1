@@ -2,7 +2,7 @@
     "randomSeed" : 6942067,
     "testMode" : false,
     "testFilename" : "tests.txt",
-    "testArrayLen" : 10,
+    "testCasesArrayLengths" : [10000,20000,40000,80000,160000,320000,640000],
     "testRepetitionCounter": 1,
     "printAfterSorting": true,
     "printAfterGenerating": true,
