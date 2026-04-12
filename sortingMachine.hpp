@@ -17,7 +17,7 @@ public:
       arr[j + 1] = val;
     }
   }
-  void heapify(T *arr, int len, int index) {
+  static void heapify(T *arr, int len, int index) {
     int left = index * 2 + 1;
     int right = index * 2 + 2;
     int newRootI = index;
@@ -35,7 +35,7 @@ public:
       heapify(arr, len, newRootI);
     }
   }
-  void heapSort(T *arr, int len) {
+  static void heapSort(T *arr, int len) {
     for (int i = len / 2 - 1; i >= 0; i--)
       heapify(arr, len, i);
 
@@ -84,6 +84,32 @@ public:
     quickSort(arr, i);
     quickSort(arr + i + 1, len - i - 1);
   }
-  void shellSort(T *arr);
+  void shellSortOne(T *arr, int len) {
+    // Macin Ciura: Best Increments for the Average Case of Shellsort
+
+    int gaps[] = {1, 4, 10, 23, 57, 132, 301, 701};
+    int i = 0;
+
+    while (i < 8 && gaps[i] < len) {
+      i++;
+    }
+    i--;
+    if (i == 0)
+      return;
+    while (i >= 0) {
+      for (int j = gaps[i]; j < len; j++) {
+        T temp = arr[j];
+        int k = j;
+
+        while (k >= gaps[i] && arr[k - gaps[i]] > temp) {
+          arr[k] = arr[k - gaps[i]];
+          k -= gaps[i];
+        }
+        arr[k] = temp;
+      }
+      i--;
+    }
+  };
+  void shellSortTwo(T *arr, int len);
 };
 #endif
