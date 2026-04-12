@@ -35,7 +35,16 @@ public:
       heapify(arr, len, newRootI);
     }
   }
-  void heapSort(T *arr, int len) {}
+  void heapSort(T *arr, int len) {
+    for (int i = len / 2 - 1; i >= 0; i--)
+      heapify(arr, len, i);
+
+    int heapSize = len - 1;
+    while (heapSize > 0) {
+      std::swap(arr[0], arr[heapSize]);
+      heapify(arr, heapSize, 0);
+    }
+  }
   static void quickSort(T *arr, int len) {
     PivotStrategy pivotStrat = Config::quickSortPivot.getValue();
     int pIndex;
