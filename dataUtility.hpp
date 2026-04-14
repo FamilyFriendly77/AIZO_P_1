@@ -83,7 +83,7 @@ public:
       std::cout << "------------------------" << std::endl;
       std::cout << "READ ARRAY:" << std::endl;
       for (int i = 0; i < length; i++) {
-        std::cout << array[i];
+        std::cout << array[i] << std::endl;
       }
       std::cout << "------------------------" << std::endl;
     }

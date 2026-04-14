@@ -1,5 +1,4 @@
 #include "config.hpp"
-#include <cstddef>
 #include <exception>
 #include <fstream>
 #include <iostream>
@@ -47,6 +46,8 @@ void Config::loadConfigFromFile() {
   }
   randomSeed.setSetting(config.value(randomSeed.getLabel(), 123456));
   inTestMode.setSetting(config.value(inTestMode.getLabel(), true));
+  testSortingAlg.setSetting(
+      config.value(testSortingAlg.getLabel(), "heapSort"));
   testFilename.setSetting(config.value(testFilename.getLabel(), "test.txt"));
   testCasesArrayLengths.setSetting(
       config.value(testCasesArrayLengths.getLabel(), std::vector<int>{}));
@@ -57,13 +58,14 @@ void Config::loadConfigFromFile() {
   printAfterGenerating.setSetting(
       config.value(printAfterGenerating.getLabel(), true));
   testIfSorted.setSetting(config.value(testIfSorted.getLabel(), true));
-  if (config.value(quickSortPivot.getLabel(), "FIRST") == "FIRST") {
+  std::string pivot = config.value(quickSortPivot.getLabel(), "FIRST");
+  if (pivot == "FIRST") {
     quickSortPivot.setSetting(FIRST);
-  } else if (config.value(quickSortPivot.getLabel(), "") == "LAST") {
+  } else if (pivot == "LAST") {
     quickSortPivot.setSetting(LAST);
-  } else if (config.value(quickSortPivot.getLabel(), "") == "MIDDLE") {
+  } else if (pivot == "MIDDLE") {
     quickSortPivot.setSetting(MIDDLE);
-  } else if (config.value(quickSortPivot.getLabel(), "") == "RANDOM") {
+  } else if (pivot == "RANDOM") {
     quickSortPivot.setSetting(RANDOM);
   }
   std::cout << "Succesfully loaded config from "

@@ -18,7 +18,6 @@ public:
   static Setting<std::string> testSortingAlg;
   static Setting<bool> printAfterGenerating;
   static Setting<bool> printAfterSorting;
-  static Setting<bool> printBeforeSorting;
   static Setting<PivotStrategy> quickSortPivot;
   static Setting<bool> testIfSorted;
   static void loadConfigFromFile();

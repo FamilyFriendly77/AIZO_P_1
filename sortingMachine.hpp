@@ -2,6 +2,7 @@
 #define SORTINGMACHINE_HPP
 #include "config.hpp"
 #include <algorithm>
+#include <cmath>
 
 template <typename T> class SortingMachine {
 public:
@@ -21,9 +22,6 @@ public:
     int left = index * 2 + 1;
     int right = index * 2 + 2;
     int newRootI = index;
-    if (arr[index] > arr[left] && arr[index] > arr[right]) {
-      return;
-    }
     if (left < len && arr[left] > arr[newRootI]) {
       newRootI = left;
     }
@@ -43,6 +41,7 @@ public:
     while (heapSize > 0) {
       std::swap(arr[0], arr[heapSize]);
       heapify(arr, heapSize, 0);
+      heapSize--;
     }
   }
   static void quickSort(T *arr, int len) {
@@ -84,7 +83,7 @@ public:
     quickSort(arr, i);
     quickSort(arr + i + 1, len - i - 1);
   }
-  void shellSortOne(T *arr, int len) {
+  static void shellSortOne(T *arr, int len) {
     // Macin Ciura: Best Increments for the Average Case of Shellsort
 
     int gaps[] = {1, 4, 10, 23, 57, 132, 301, 701};
@@ -110,6 +109,22 @@ public:
       i--;
     }
   };
-  void shellSortTwo(T *arr, int len);
+  static void shellSortTwo(T *arr, int len) {
+    int gap = 1;
+    while (gap <= len / 2)
+      gap = gap * 2 + 1;
+    for (; gap >= 1; gap /= 2) {
+      for (int i = gap; i < len; i++) {
+        T temp = arr[i];
+        int j = i;
+
+        while (j >= gap && arr[j - gap] > temp) {
+          arr[j] = arr[j - gap];
+          j -= gap;
+        }
+        arr[j] = temp;
+      }
+    }
+  };
 };
 #endif
