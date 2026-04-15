@@ -4,7 +4,7 @@
 #include <iostream>
 using json = nlohmann::json;
 
-Setting<unsigned int> Config::randomSeed = Setting<unsigned int>("randomSeed");
+Setting<int> Config::randomSeed = Setting<int>("randomSeed");
 
 Setting<bool> Config::inTestMode = Setting<bool>("testMode");
 

@@ -8,6 +8,8 @@ public:
   SortingMachine<int> sorter = SortingMachine<int>();
 };
 int main(int argc, char *argv[]) {
+  std::cout << "ver: ";
+  std::cout << __cplusplus << std::endl;
   if (argc == 2) {
     Config::setConfigFile(argv[1]);
   } else {

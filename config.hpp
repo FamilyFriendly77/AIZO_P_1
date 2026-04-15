@@ -10,7 +10,7 @@ private:
   static Setting<std::string> configFile;
 
 public:
-  static Setting<unsigned int> randomSeed;
+  static Setting<int> randomSeed;
   static Setting<bool> inTestMode;
   static Setting<std::string> testFilename;
   static Setting<std::vector<int>> testCasesArrayLengths;

@@ -2,9 +2,14 @@
 #define SORTINGMACHINE_HPP
 #include "config.hpp"
 #include <algorithm>
-#include <cmath>
-
+#include <ctime>
+#include <random>
 template <typename T> class SortingMachine {
+private:
+  static inline std::mt19937 pivotGenerator{
+      static_cast<unsigned int>(time(nullptr))};
+  static inline std::uniform_real_distribution<double> generatePivot{0, 1.0};
+
 public:
   static void insertSort(T *arr, int len) {
     for (int i = 1; i < len; i++) {
@@ -59,7 +64,7 @@ public:
       break;
     case RANDOM:
       // tbf
-      pIndex = 0;
+      pIndex = (int)(generatePivot(pivotGenerator) * len);
       break;
     }
     if (len <= 1)

@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
+#include <random>
 #include <string>
 #ifndef DATAUTILITY_HPP
 #define DATAUTILITY_HPP
@@ -10,7 +11,7 @@ private:
   int arrayLen;
 
 public:
-  DataUtility<T>() { srand(Config::randomSeed.getValue()); };
+  DataUtility<T>(int seed = Config::randomSeed.getValue()) { srand(seed); };
   void setArrayLen(int len) { arrayLen = len; };
   int getArrayLen() { return arrayLen; };
   // setting the seed value again even on the same object will give the same

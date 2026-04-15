@@ -1,6 +1,6 @@
 {
     "randomSeed" : 6942067,
-    "testMode" : false,
+    "testMode" : true,
     "testFilename" : "tests.txt",
     "testCasesArrayLengths" : [10,20,40,80,160,320,640],
     "testRepetitionCounter": 1,
