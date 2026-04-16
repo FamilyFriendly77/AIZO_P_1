@@ -2,7 +2,6 @@
 #include "dataUtility.hpp"
 #include <chrono>
 #include <cstdlib>
-#include <exception>
 #include <iostream>
 template <typename T> class TestingUtility {
 private:

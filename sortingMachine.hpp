@@ -6,6 +6,8 @@
 #include <random>
 template <typename T> class SortingMachine {
 private:
+  // separating pivot generation from data generation by usinng a separate sudo
+  // random generation engine
   static inline std::mt19937 pivotGenerator{
       static_cast<unsigned int>(time(nullptr))};
   static inline std::uniform_real_distribution<double> generatePivot{0, 1.0};

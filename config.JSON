@@ -1,11 +1,12 @@
 {
     "randomSeed" : 6942067,
-    "testMode" : true,
+    "testMode" : false,
     "testFilename" : "tests.txt",
-    "testCasesArrayLengths" : [10,20,40,80,160,320,640],
-    "testRepetitionCounter": 1,
-    "printAfterSorting": true,
-    "printAfterGenerating": true,
+    "testCasesArrayLengths" : [10000,20000,40000,80000,160000,320000,640000],
+    "testRepetitionCounter": 100,
+    "printAfterSorting": false,
+    "printAfterGenerating": false,
     "testSortingAlg": "quickSort",
-    "testIfSorted": false
+    "testIfSorted": true,
+    "quickSortPivot": "MIDDLE"
   }

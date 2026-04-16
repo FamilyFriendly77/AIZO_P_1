@@ -1,8 +1,8 @@
 #include "config.hpp"
+#include "sortingMachine.hpp"
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
-#include <random>
 #include <string>
 #ifndef DATAUTILITY_HPP
 #define DATAUTILITY_HPP
@@ -56,6 +56,26 @@ public:
       }
       std::cout << "------------------------" << std::endl;
     }
+    return array;
+  }
+  T *generateAscSortedArray() {
+    T *array = generateRandomArray();
+    SortingMachine<T>::quickSort(array, arrayLen);
+    return array;
+  }
+  T *generateDscSortedArray() {
+    T *array = generateRandomArray();
+    SortingMachine<T>::quickSort(array, arrayLen);
+    T *temp = (T *)malloc(arrayLen * sizeof(T));
+
+    // Copy elements from original array
+    // to temp in reverse order
+    for (int i = 0; i < arrayLen; i++)
+      temp[i] = array[arrayLen - i - 1];
+
+    // Copy elements back to original array
+    for (int i = 0; i < arrayLen; i++)
+      array[i] = temp[i];
     return array;
   }
 
