@@ -4,7 +4,7 @@
     "testFilename" : "tests.txt",
     "testCasesArrayLengths" : [10000,20000,40000,80000,160000,320000,640000],
     "testRepetitionCounter": 100,
-    "printAfterSorting": false,
+    "printAfterSorting": true,
     "printAfterGenerating": false,
     "testSortingAlg": "quickSort",
     "testIfSorted": true,

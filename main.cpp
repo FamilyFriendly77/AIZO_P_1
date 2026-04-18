@@ -4,9 +4,9 @@
 #include <algorithm>
 #include <cstdlib>
 #include <iostream>
-SortingMachine<int> sorter = SortingMachine<int>();
-TestingUtility<int> testingUtil = TestingUtility<int>();
-DataUtility<int> dataUtil = DataUtility<int>();
+SortingMachine<double> sorter = SortingMachine<double>();
+TestingUtility<double> testingUtil = TestingUtility<double>();
+DataUtility<double> dataUtil = DataUtility<double>();
 
 enum GenerateStrategy {
   RANDOM_ARRAY,
@@ -134,7 +134,7 @@ int main(int argc, char *argv[]) {
   Config::loadConfigFromFile();
   if (Config::inTestMode.getValue()) {
     // READING ARRAY FROM FILE AND TESTING ALL ALGS
-    int *arr = dataUtil.readArrayFromFile();
+    double *arr = dataUtil.readArrayFromFile();
     std::string alg = Config::testSortingAlg.getValue();
     std::cout << "Testing " << alg << std::endl;
     if (alg == "quickSort")
@@ -152,11 +152,11 @@ int main(int argc, char *argv[]) {
     else if (alg == "heapSort")
       testingUtil.testSortingTime(sorter.heapSort, arr, dataUtil.getArrayLen());
   } else {
-    runTests<int>(RANDOM_ARRAY, "Randomly generated array");
-    runTests<int>(SORTED_33, "Partially sorted array - 33%");
-    runTests<int>(SORTED_66, "Partially sorted array - 66%");
-    runTests<int>(SORTED_66, "ASC sorted array");
-    runTests<int>(SORTED_66, "DSC sorted array");
+    runTests<double>(RANDOM_ARRAY, "Randomly generated array");
+    runTests<double>(SORTED_33, "Partially sorted array - 33%");
+    runTests<double>(SORTED_66, "Partially sorted array - 66%");
+    runTests<double>(SORTED_66, "ASC sorted array");
+    runTests<double>(SORTED_66, "DSC sorted array");
   }
   return 0;
 };
