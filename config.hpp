@@ -20,6 +20,10 @@ public:
   static Setting<bool> printAfterSorting;
   static Setting<PivotStrategy> quickSortPivot;
   static Setting<bool> testIfSorted;
+  static Setting<bool> testINT;
+  static Setting<bool> testFLOAT;
+  static Setting<bool> testDOUBLE;
+  static Setting<bool> testCHAR;
   static void loadConfigFromFile();
   static void setConfigFile(std::string filename);
 };

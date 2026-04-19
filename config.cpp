@@ -30,6 +30,11 @@ void Config::setConfigFile(std::string filename) {
 }
 Setting<PivotStrategy> Config::quickSortPivot =
     Setting<PivotStrategy>("quickSortPivot");
+Setting<bool> Config::testINT = Setting<bool>("testINT");
+Setting<bool> Config::testFLOAT = Setting<bool>("testFLOAT");
+Setting<bool> Config::testDOUBLE = Setting<bool>("testDOUBLE");
+Setting<bool> Config::testCHAR = Setting<bool>("testCHAR");
+
 void Config::loadConfigFromFile() {
   std::ifstream f(Config::configFile.getValue());
   // checking if file opens, if not, throw an error because it can't be read
@@ -58,6 +63,10 @@ void Config::loadConfigFromFile() {
   printAfterGenerating.setSetting(
       config.value(printAfterGenerating.getLabel(), true));
   testIfSorted.setSetting(config.value(testIfSorted.getLabel(), true));
+  testINT.setSetting(config.value(testINT.getLabel(), false));
+  testFLOAT.setSetting(config.value(testFLOAT.getLabel(), false));
+  testDOUBLE.setSetting(config.value(testDOUBLE.getLabel(), false));
+  testCHAR.setSetting(config.value(testCHAR.getLabel(), false));
   std::string pivot = config.value(quickSortPivot.getLabel(), "FIRST");
   if (pivot == "FIRST") {
     quickSortPivot.setSetting(FIRST);

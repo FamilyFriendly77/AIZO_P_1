@@ -4,9 +4,6 @@
 #include <algorithm>
 #include <cstdlib>
 #include <iostream>
-SortingMachine<double> sorter = SortingMachine<double>();
-TestingUtility<double> testingUtil = TestingUtility<double>();
-DataUtility<double> dataUtil = DataUtility<double>();
 
 enum GenerateStrategy {
   RANDOM_ARRAY,
@@ -16,7 +13,10 @@ enum GenerateStrategy {
   SORTED_DSC
 };
 
-template <typename T> void runTests(GenerateStrategy strat, std::string name) {
+template <typename T>
+void runTests(GenerateStrategy strat, std::string name,
+              TestingUtility<T> testingUtil, SortingMachine<T> sorter,
+              DataUtility<T> dataUtil) {
   T *arr;
   double insertTimesSum;
   double heapTimesSum;
@@ -133,6 +133,10 @@ int main(int argc, char *argv[]) {
   }
   Config::loadConfigFromFile();
   if (Config::inTestMode.getValue()) {
+    SortingMachine<double> sorter = SortingMachine<double>();
+    TestingUtility<double> testingUtil = TestingUtility<double>();
+    DataUtility<double> dataUtil = DataUtility<double>();
+
     // READING ARRAY FROM FILE AND TESTING ALL ALGS
     double *arr = dataUtil.readArrayFromFile();
     std::string alg = Config::testSortingAlg.getValue();
@@ -152,11 +156,72 @@ int main(int argc, char *argv[]) {
     else if (alg == "heapSort")
       testingUtil.testSortingTime(sorter.heapSort, arr, dataUtil.getArrayLen());
   } else {
-    runTests<double>(RANDOM_ARRAY, "Randomly generated array");
-    runTests<double>(SORTED_33, "Partially sorted array - 33%");
-    runTests<double>(SORTED_66, "Partially sorted array - 66%");
-    runTests<double>(SORTED_66, "ASC sorted array");
-    runTests<double>(SORTED_66, "DSC sorted array");
+    if (Config::testINT.getValue()) {
+      DataUtility<int> dataUtil = DataUtility<int>();
+      TestingUtility<int> testingUtil = TestingUtility<int>();
+      SortingMachine<int> sorter = SortingMachine<int>();
+
+      runTests<int>(RANDOM_ARRAY, "Randomly generated array", testingUtil,
+                    sorter, dataUtil);
+      runTests<int>(SORTED_33, "Partially sorted array - 33%", testingUtil,
+                    sorter, dataUtil);
+      runTests<int>(SORTED_66, "Partially sorted array - 66%", testingUtil,
+                    sorter, dataUtil);
+      runTests<int>(SORTED_66, "ASC sorted array", testingUtil, sorter,
+                    dataUtil);
+      runTests<int>(SORTED_66, "DSC sorted array", testingUtil, sorter,
+                    dataUtil);
+    }
+
+    if (Config::testDOUBLE.getValue()) {
+      DataUtility<double> dataUtil = DataUtility<double>();
+      TestingUtility<double> testingUtil = TestingUtility<double>();
+      SortingMachine<double> sorter = SortingMachine<double>();
+
+      runTests<double>(RANDOM_ARRAY, "Randomly generated array", testingUtil,
+                       sorter, dataUtil);
+      runTests<double>(SORTED_33, "Partially sorted array - 33%", testingUtil,
+                       sorter, dataUtil);
+      runTests<double>(SORTED_66, "Partially sorted array - 66%", testingUtil,
+                       sorter, dataUtil);
+      runTests<double>(SORTED_66, "ASC sorted array", testingUtil, sorter,
+                       dataUtil);
+      runTests<double>(SORTED_66, "DSC sorted array", testingUtil, sorter,
+                       dataUtil);
+    }
+    if (Config::testFLOAT.getValue()) {
+      DataUtility<float> dataUtil = DataUtility<float>();
+      TestingUtility<float> testingUtil = TestingUtility<float>();
+      SortingMachine<float> sorter = SortingMachine<float>();
+
+      runTests<float>(RANDOM_ARRAY, "Randomly generated array", testingUtil,
+                      sorter, dataUtil);
+      runTests<float>(SORTED_33, "Partially sorted array - 33%", testingUtil,
+                      sorter, dataUtil);
+      runTests<float>(SORTED_66, "Partially sorted array - 66%", testingUtil,
+                      sorter, dataUtil);
+      runTests<float>(SORTED_66, "ASC sorted array", testingUtil, sorter,
+                      dataUtil);
+      runTests<float>(SORTED_66, "DSC sorted array", testingUtil, sorter,
+                      dataUtil);
+    }
+
+    if (Config::testCHAR.getValue()) {
+      DataUtility<char> dataUtil = DataUtility<char>();
+      TestingUtility<char> testingUtil = TestingUtility<char>();
+      SortingMachine<char> sorter = SortingMachine<char>();
+
+      runTests<char>(RANDOM_ARRAY, "Randomly generated array", testingUtil,
+                     sorter, dataUtil);
+      runTests<char>(SORTED_33, "Partially sorted array - 33%", testingUtil,
+                     sorter, dataUtil);
+      runTests<char>(SORTED_66, "Partially sorted array - 66%", testingUtil,
+                     sorter, dataUtil);
+      runTests<char>(SORTED_66, "ASC sorted array", testingUtil, sorter,
+                     dataUtil);
+      runTests<char>(SORTED_66, "DSC sorted array", testingUtil, sorter,
+                     dataUtil);
+    }
   }
   return 0;
 };
