@@ -30,10 +30,10 @@ public:
       } else {
         std::cout << "Somethig went wrong while sorting!" << std::endl;
       }
+      std::cout << "===============================" << std::endl;
     }
-    std::cout << "===============================" << std::endl;
 
-    result += (end - start);
+    result = (end - start);
 
     free(arr);
     return result.count();

@@ -34,7 +34,7 @@ void runTests(GenerateStrategy strat, std::string name,
 
   for (int i = 0; i < Config::testCasesArrayLengths.getValue().size(); i++) {
     dataUtil.setArrayLen(Config::testCasesArrayLengths.getValue().at(i));
-    std::cout << "Currently texting Arrays with the length of "
+    std::cout << "Currently testing Arrays with the length of "
               << dataUtil.getArrayLen() << " items." << std::endl;
     std::cout << "------------------------" << std::endl;
     quickTimesSum = 0.0;
@@ -65,27 +65,19 @@ void runTests(GenerateStrategy strat, std::string name,
       quickTimesSum += testingUtil.testSortingTime(sorter.quickSort, arr,
                                                    dataUtil.getArrayLen());
       if (Config::testIfSorted.getValue())
-        std::cout << "QuickSort" << std::endl;
-
-      std::cout << "InsertSort" << std::endl;
+        std::cout << "InsertSort" << std::endl;
       insertTimesSum += testingUtil.testSortingTime(sorter.insertSort, arr,
                                                     dataUtil.getArrayLen());
       if (Config::testIfSorted.getValue())
-        std::cout << "QuickSort" << std::endl;
-
-      std::cout << "ShellSort - Ciura" << std::endl;
+        std::cout << "ShellSort - Ciura" << std::endl;
       shellOneTimesSum += testingUtil.testSortingTime(sorter.shellSortOne, arr,
                                                       dataUtil.getArrayLen());
       if (Config::testIfSorted.getValue())
-        std::cout << "QuickSort" << std::endl;
-
-      std::cout << "ShellSort - 2^k - 1" << std::endl;
+        std::cout << "ShellSort - 2^k - 1" << std::endl;
       shellTwoTimesSum += testingUtil.testSortingTime(sorter.shellSortTwo, arr,
                                                       dataUtil.getArrayLen());
       if (Config::testIfSorted.getValue())
-        std::cout << "QuickSort" << std::endl;
-
-      std::cout << "HeapSort" << std::endl;
+        std::cout << "HeapSort" << std::endl;
       heapTimesSum += testingUtil.testSortingTime(sorter.heapSort, arr,
                                                   dataUtil.getArrayLen());
     }
@@ -157,6 +149,7 @@ int main(int argc, char *argv[]) {
       testingUtil.testSortingTime(sorter.heapSort, arr, dataUtil.getArrayLen());
   } else {
     if (Config::testINT.getValue()) {
+      std::cout << "TESTING ON INT DATATYPE:" << std::endl;
       DataUtility<int> dataUtil = DataUtility<int>();
       TestingUtility<int> testingUtil = TestingUtility<int>();
       SortingMachine<int> sorter = SortingMachine<int>();
@@ -167,13 +160,15 @@ int main(int argc, char *argv[]) {
                     sorter, dataUtil);
       runTests<int>(SORTED_66, "Partially sorted array - 66%", testingUtil,
                     sorter, dataUtil);
-      runTests<int>(SORTED_66, "ASC sorted array", testingUtil, sorter,
+      runTests<int>(SORTED_ASC, "ASC sorted array", testingUtil, sorter,
                     dataUtil);
-      runTests<int>(SORTED_66, "DSC sorted array", testingUtil, sorter,
+      runTests<int>(SORTED_DSC, "DSC sorted array", testingUtil, sorter,
                     dataUtil);
     }
 
     if (Config::testDOUBLE.getValue()) {
+      std::cout << "TESTING ON DOUBLE DATATYPE:" << std::endl;
+
       DataUtility<double> dataUtil = DataUtility<double>();
       TestingUtility<double> testingUtil = TestingUtility<double>();
       SortingMachine<double> sorter = SortingMachine<double>();
@@ -184,12 +179,14 @@ int main(int argc, char *argv[]) {
                        sorter, dataUtil);
       runTests<double>(SORTED_66, "Partially sorted array - 66%", testingUtil,
                        sorter, dataUtil);
-      runTests<double>(SORTED_66, "ASC sorted array", testingUtil, sorter,
+      runTests<double>(SORTED_ASC, "ASC sorted array", testingUtil, sorter,
                        dataUtil);
-      runTests<double>(SORTED_66, "DSC sorted array", testingUtil, sorter,
+      runTests<double>(SORTED_DSC, "DSC sorted array", testingUtil, sorter,
                        dataUtil);
     }
     if (Config::testFLOAT.getValue()) {
+      std::cout << "TESTING ON FLOAT DATATYPE:" << std::endl;
+
       DataUtility<float> dataUtil = DataUtility<float>();
       TestingUtility<float> testingUtil = TestingUtility<float>();
       SortingMachine<float> sorter = SortingMachine<float>();
@@ -200,13 +197,15 @@ int main(int argc, char *argv[]) {
                       sorter, dataUtil);
       runTests<float>(SORTED_66, "Partially sorted array - 66%", testingUtil,
                       sorter, dataUtil);
-      runTests<float>(SORTED_66, "ASC sorted array", testingUtil, sorter,
+      runTests<float>(SORTED_ASC, "ASC sorted array", testingUtil, sorter,
                       dataUtil);
-      runTests<float>(SORTED_66, "DSC sorted array", testingUtil, sorter,
+      runTests<float>(SORTED_DSC, "DSC sorted array", testingUtil, sorter,
                       dataUtil);
     }
 
     if (Config::testCHAR.getValue()) {
+      std::cout << "TESTING ON CHAR DATATYPE:" << std::endl;
+
       DataUtility<char> dataUtil = DataUtility<char>();
       TestingUtility<char> testingUtil = TestingUtility<char>();
       SortingMachine<char> sorter = SortingMachine<char>();
@@ -217,9 +216,9 @@ int main(int argc, char *argv[]) {
                      sorter, dataUtil);
       runTests<char>(SORTED_66, "Partially sorted array - 66%", testingUtil,
                      sorter, dataUtil);
-      runTests<char>(SORTED_66, "ASC sorted array", testingUtil, sorter,
+      runTests<char>(SORTED_ASC, "ASC sorted array", testingUtil, sorter,
                      dataUtil);
-      runTests<char>(SORTED_66, "DSC sorted array", testingUtil, sorter,
+      runTests<char>(SORTED_DSC, "DSC sorted array", testingUtil, sorter,
                      dataUtil);
     }
   }
