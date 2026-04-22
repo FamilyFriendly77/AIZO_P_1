@@ -1,0 +1,16 @@
+TY  - JOUR
+AU  - Carlsson, Svante
+PY  - 1987
+DA  - 1987/03/01
+TI  - Average-case results on heapsort
+JO  - BIT Numerical Mathematics
+SP  - 2
+EP  - 17
+VL  - 27
+IS  - 1
+AB  - A new algorithm for rearranging a heap is presented and analysed in the average case. The average case upper bound for deleting the maximum element of a random heap is improved, and is shown to be less than [logn]+0.299+M(n) comparisons, *) whereM(n) is between 0 and 1. It is also shown that a heap can be constructed using 1.650n+O(logn) comparisons with this algorithm, the best result for any algorithm which does not use any extra space. The expected time to sortn elements is argued to be less thann logn+0.670n+O(logn), while simulation result points at an average case ofn log n+0.4n which will make it the fastest in-place sorting algorithm. The same technique is used to show that the average number of comparisons when deleting the maximum element of a heap using Williams' algorithm for rearrangement is 2([logn]−1.299+L(n)) whereL(n) also is between 0 and 1, and the average cost for Floyd-Williams Heapsort is at least 2nlogn−3.27n, counting only comparisons. An analysis of the number of interchanges when deleting the maximum element of a random heap, which is the same for both algorithms, is also presented.
+SN  - 1572-9125
+UR  - https://doi.org/10.1007/BF01937350
+DO  - 10.1007/BF01937350
+ID  - Carlsson1987
+ER  - 

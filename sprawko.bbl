@@ -1,0 +1,68 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{Carlsson}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ebe44b0e80f9d3e9473bc6f16f4860b}{%
+           family={Carlsson},
+           familyi={C\bibinitperiod},
+           given={Svante},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9ebe44b0e80f9d3e9473bc6f16f4860b}
+      \strng{fullhash}{9ebe44b0e80f9d3e9473bc6f16f4860b}
+      \strng{fullhashraw}{9ebe44b0e80f9d3e9473bc6f16f4860b}
+      \strng{bibnamehash}{9ebe44b0e80f9d3e9473bc6f16f4860b}
+      \strng{authorbibnamehash}{9ebe44b0e80f9d3e9473bc6f16f4860b}
+      \strng{authornamehash}{9ebe44b0e80f9d3e9473bc6f16f4860b}
+      \strng{authorfullhash}{9ebe44b0e80f9d3e9473bc6f16f4860b}
+      \strng{authorfullhashraw}{9ebe44b0e80f9d3e9473bc6f16f4860b}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A new algorithm for rearranging a heap is presented and analysed in the average case. The average case upper bound for deleting the maximum element of a random heap is improved, and is shown to be less than {$[$}logn{$]$}+0.299+M(n) comparisons, *) whereM(n) is between 0 and 1. It is also shown that a heap can be constructed using 1.650n+O(logn) comparisons with this algorithm, the best result for any algorithm which does not use any extra space. The expected time to sortn elements is argued to be less thann logn+0.670n+O(logn), while simulation result points at an average case ofn log n+0.4n which will make it the fastest in-place sorting algorithm. The same technique is used to show that the average number of comparisons when deleting the maximum element of a heap using Williams' algorithm for rearrangement is 2({$[$}logn{$]$}−1.299+L(n)) whereL(n) also is between 0 and 1, and the average cost for Floyd-Williams Heapsort is at least 2nlogn−3.27n, counting only comparisons. An analysis of the number of interchanges when deleting the maximum element of a random heap, which is the same for both algorithms, is also presented.}
+      \field{isbn}{1572-9125}
+      \field{journaltitle}{BIT Numerical Mathematics}
+      \field{number}{1}
+      \field{title}{Average-case results on heapsort}
+      \field{volume}{27}
+      \field{year}{1987}
+      \field{pages}{2\bibrangedash 17}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/BF01937350
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01937350
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01937350
+      \endverb
+      \warn{\item article entry 'Carlsson' (bibliografia.bib): Invalid format '1987/03/01' of date field 'date' - ignoring}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

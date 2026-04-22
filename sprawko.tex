@@ -17,13 +17,14 @@
 \usepackage{psfrag}
 \usepackage{pgfplots}
 \usepackage{bm}
+\usepackage[style=authoryear, backend=biber]{biblatex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Other Settings
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \geometry{a4paper}
-
+\addbibresource{bibliografia.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -36,6 +37,23 @@
 \begin{document}
     \maketitle
     \section{Wprowadzenie}
-
-    
+      \subsection{Cele Projektu}
+        Celem projektu było zaimplementowanie wybranych algorytmów sortowania i przeprowadzenie analizy ich efektywności.
+        Otrzymane wyniki zostały porównane z teoretyczną złożonością obliczeniową analizowanych algorytmów. Analizie został także podany wpływ danych poddanych sortowaniu na efektywność algorytmów.
+      \subsection{Algorytmy poddane analizie}
+      \subsubsection{Sortowanie przez kopcowanie}
+      Algorytm sortowanie przez kopcowanie możemy podzielić na dwie części, w pierwszej kolejności musimy sortowaną tablicę doprowadzić do poprawnej struktury kopca maksymalnego,
+      czyli takiej w której każdy węzeł jest mniejszy lub równy swojemu rodzicowi.
+      Następnie z utworzonej struktury kopca usuwamy korzeń, będący największym elementem w kopcu po czym zamieniamy go z ostatnim elementem w kopcu i zmniejszamy rozmiar kopca. Po każdym wykonaniu takiej operacji musimy przywrócić własność kopca zaczynając od nowego korzenia. 
+      \\\\Algorytm ten, składając w całość tworzenie kopca o złożoności $O(n)$ 
+      wywoływane raz oraz przywracanie własności kopca o złożności
+      $O(\log n)$ wywoływane $n$ razy, daje nam stabilną teoretyczną
+      wydajność dla średniego i najgorszego przypadku w których złożoność
+      obliczeniowa jest równa $O(n \log n)$\cite{Carlsson}
+      \subsubsection{Sortowanie przez wstawianie}
+      \subsubsection{Sortowanie szybkie}
+      \subsubsection{Sortowanie Shella - wyrażenie $2^k - 1$}
+      \subsubsection{Sortowanie Shella - ciąg opracowany przez Macina Ciurę}
+      \subsection{Założenia techniczne}
+      \printbibliography
 \end{document}
