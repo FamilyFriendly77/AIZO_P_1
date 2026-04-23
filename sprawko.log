@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.18)  22 APR 2026 16:47
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.22)  22 APR 2026 09:58
->>>>>>> Stashed changes
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.22)  24 APR 2026 00:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -924,17 +920,21 @@ Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
 Package bm Info: No bold for \U/msa/m/n, using \pmb.
 Package bm Info: No bold for \U/msb/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
-<<<<<<< Updated upstream
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+)
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
- (/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count352
- (/usr/local/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+))
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+)
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -991,13 +991,14 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibhang=\skip135
 \blx@bcfin=\read3
 \blx@bcfout=\write5
-\blx@langwohyphens=\language91
+\blx@langwohyphens=\language79
 \c@mincomprange=\count396
 \c@maxcomprange=\count397
 \c@mincompwidth=\count398
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
 File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -1088,12 +1089,13 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip149
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
 File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def
+ (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 \c@textcitecount=\count467
 \c@textcitetotal=\count468
@@ -1111,18 +1113,24 @@ File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\authoryear
+.bbx
 File: authoryear.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
+bx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count476
 \c@bbx:relatedtotal=\count477
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\authoryear
+.cbx
 File: authoryear.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -1134,25 +1142,24 @@ Package biblatex Info: Redefining '\textcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.cfg
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
 Package biblatex Info: ... and expl3
-(biblatex)             2026-01-19 L3 programming layer (loader) 
+(biblatex)             2025-12-24 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3
+.sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
 \@quotelevel=\count478
 \@quotereset=\count479
- (./sprawko.aux)
-=======
-)
-(sprawko.aux)
->>>>>>> Stashed changes
+ (sprawko.aux)
 \openout1 = `sprawko.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -1213,29 +1220,17 @@ ii
 \scratchcounter=\count480
 \scratchdimen=\dimen321
 \scratchbox=\box75
-<<<<<<< Updated upstream
 \nofMPsegments=\count481
 \nofMParguments=\count482
-\everyMPshowfont=\toks49
+\everyMPshowfont=\toks52
 \MPscratchCnt=\count483
 \MPscratchDim=\dimen322
 \MPnumerator=\count484
 \makeMPintoPDFobject=\count485
-\everyMPtoPDFconversion=\toks50
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-=======
-\nofMPsegments=\count353
-\nofMParguments=\count354
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count355
-\MPscratchDim=\dimen322
-\MPnumerator=\count356
-\makeMPintoPDFobject=\count357
 \everyMPtoPDFconversion=\toks53
 )
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
->>>>>>> Stashed changes
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -1247,13 +1242,16 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 \Hy@linkcounter=\count486
 
 
-<<<<<<< Updated upstream
-Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
+your preamble.
  on input line 37.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lb
+x
 File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -1263,47 +1261,31 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'sprawko.bbl' found.
- (./sprawko.bbl
+ (sprawko.bbl
 
 Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'Carlsson':
-(biblatex)                - article entry 'Carlsson' (bibliografia.bib): Invalid format '1987/03/01' of date field 'date' - ignoring.
+(biblatex)                with 'AverageHeapSort':
+(biblatex)                - article entry 'AverageHeapSort' (bibliografia.bib):
+ Invalid format '1987/03/01' of date field 'date' - ignoring.
 
 )
 Package biblatex Info: Reference section=0 on input line 37.
 Package biblatex Info: Reference segment=0 on input line 37.
-LaTeX Font Info:    Trying to load font information for OML+plm on input line 38.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/polski/omlplm.fd
-File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
-)
-LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 38.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/polski/omsplsy.fd
-File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
-)
-LaTeX Font Info:    Trying to load font information for OMX+plex on input line 38.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/polski/omxplex.fd
-=======
-Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
-ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
-your preamble.
- on input line 36.
-
 LaTeX Font Info:    Trying to load font information for OML+plm on input line 3
-7.
-(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/polski\omlplm.fd
+8.
+ (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/polski\omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 
-37.
+38.
 
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/polski\omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMX+plex on input line 
-37.
+38.
 
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/polski\omxplex.fd
->>>>>>> Stashed changes
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
@@ -1311,14 +1293,17 @@ LaTeX Font Info:    External font `plex10' loaded for size
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <8> on input line 38.
 LaTeX Font Info:    External font `plex10' loaded for size
-<<<<<<< Updated upstream
 (Font)              <6> on input line 38.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `plex10' loaded for size
@@ -1332,35 +1317,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--53
 
  []
 
-LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 58.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/polski/ot4cmtt.fd
-File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
-) [1
-Non-PDF special ignored!
-<special> header=psfrag.pro
 
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/pl/plsc.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/pl/pltt.enc}] (./sprawko.aux)
-=======
-(Font)              <6> on input line 37.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
 
+ []
 
-(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
-
-
-(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 [1
 Non-PDF special ignored!
 <special> header=psfrag.pro
 
 {C:/Users/kryst/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/krys
-t/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc}] (sprawko.aux)
->>>>>>> Stashed changes
+t/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc}{C:/Users/kryst/App
+Data/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plmi.enc}]
+LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
+63.
+
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmtt.fd
+File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+[2{C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plms.enc}{C:
+/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plit.enc}{C:/User
+s/kryst/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plsc.enc}{C:/Users/kry
+st/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/pltt.enc}] (sprawko.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1370,35 +1348,28 @@ Package logreq Info: Writing requests to 'sprawko.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< Updated upstream
- 34609 strings out of 467525
- 827829 string characters out of 5418982
- 1837401 words of memory out of 5000000
- 62949 multiletter control sequences out of 15000+600000
+ 34620 strings out of 467871
+ 832661 string characters out of 5418376
+ 1836397 words of memory out of 5000000
+ 62927 multiletter control sequences out of 15000+600000
  648301 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,6n,118p,1253b,1262s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/pl/plcsc10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/pl/plmi7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/pl/plti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/pl/pltt10.pfb>
-Output written on sprawko.pdf (1 page, 80720 bytes).
-PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
-=======
- 27189 strings out of 467871
- 683395 string characters out of 5418376
- 1315379 words of memory out of 5000000
- 55571 multiletter control sequences out of 15000+600000
- 638808 words of font info for 72 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 99i,6n,118p,720b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plbx12.pf
+ 99i,6n,118p,1262b,1262s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plbx10.pf
+b><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plbx12.pf
+b><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plcsc10.p
+fb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi10.p
+fb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi7.pf
 b><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr10.pfb
 ><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr12.pfb>
-<C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr17.pfb>
-Output written on sprawko.pdf (1 page, 29440 bytes).
+<C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr17.pfb><
+C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr7.pfb><C:
+/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plsy10.pfb><C:
+/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plti10.pfb><C:
+/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/pltt10.pfb>
+Output written on sprawko.pdf (2 pages, 103389 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
->>>>>>> Stashed changes
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

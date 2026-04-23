@@ -47,11 +47,16 @@
       Następnie z utworzonej struktury kopca usuwamy korzeń, będący największym elementem w kopcu po czym zamieniamy go z ostatnim elementem w kopcu i zmniejszamy rozmiar kopca. Po każdym wykonaniu takiej operacji musimy przywrócić własność kopca zaczynając od nowego korzenia. 
       \\\\Algorytm ten, składając w całość tworzenie kopca o złożoności $O(n)$ 
       wywoływane raz oraz przywracanie własności kopca o złożności
-      $O(\log n)$ wywoływane $n$ razy, daje nam stabilną teoretyczną
+      $O(\log n)$ wywoływane $n$ razy, daje nam stałą teoretyczną
       wydajność dla średniego i najgorszego przypadku w których złożoność
-      obliczeniowa jest równa $O(n \log n)$\cite{Carlsson}
+      obliczeniowa jest równa $O(n \log n)$ [\cite{AverageHeapSort}] [\cite{WorstHeapSort}] 
       \subsubsection{Sortowanie przez wstawianie}
+      Algorytm sortowania przez wstawianie buduje posortowaną tablicę element po elemencie. Algorytm iteruje przez całą sortowaną tablicę, każdy element jest usuwany z części tablicy do posortowania i wstawiany we właściwe miejsce w posortowanej częsci tablicy.
+      Efekt ten jest osiągany poprzez porównywanie aktualnie przenoszonego elemetnu z każdym elementem znajdującym się w posortowanej już części tablicy aż do momentu gdy nie zostanie napotkany element mniejszy niż aktualnie przenoszzony, który zostaje wstawiony w puste miejsce.
+      \\\\Rezultatem tego działania jest teoretyczna złożoność obliczeniowa w średnim i najgorszym przypadku na poziomie $O(n^2)$,
+      zaletą tego algorytmu jest jednak wydajność teoretyczna w przypadku prawie posortowanej tablicy na poziomie $O(n)$. [\cite{wikiInsert}]
       \subsubsection{Sortowanie szybkie}
+      Sortowanie szybkie 
       \subsubsection{Sortowanie Shella - wyrażenie $2^k - 1$}
       \subsubsection{Sortowanie Shella - ciąg opracowany przez Macina Ciurę}
       \subsection{Założenia techniczne}

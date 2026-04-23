@@ -19,7 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
-    \entry{Carlsson}{article}{}{}
+    \entry{AverageHeapSort}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9ebe44b0e80f9d3e9473bc6f16f4860b}{%
            family={Carlsson},
@@ -60,7 +60,75 @@
       \verb{url}
       \verb https://doi.org/10.1007/BF01937350
       \endverb
-      \warn{\item article entry 'Carlsson' (bibliografia.bib): Invalid format '1987/03/01' of date field 'date' - ignoring}
+      \warn{\item article entry 'AverageHeapSort' (bibliografia.bib): Invalid format '1987/03/01' of date field 'date' - ignoring}
+    \endentry
+    \entry{WorstHeapSort}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=42abc0f429d03819d28833295baeb483}{%
+           family={Suchenek},
+           familyi={S\bibinitperiod},
+           given={Marek\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{42abc0f429d03819d28833295baeb483}
+      \strng{fullhash}{42abc0f429d03819d28833295baeb483}
+      \strng{fullhashraw}{42abc0f429d03819d28833295baeb483}
+      \strng{bibnamehash}{42abc0f429d03819d28833295baeb483}
+      \strng{authorbibnamehash}{42abc0f429d03819d28833295baeb483}
+      \strng{authornamehash}{42abc0f429d03819d28833295baeb483}
+      \strng{authorfullhash}{42abc0f429d03819d28833295baeb483}
+      \strng{authorfullhashraw}{42abc0f429d03819d28833295baeb483}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{A Complete Worst-Case Analysis of Heapsort with Experimental Verification of Its Results, {A} manuscript {(MS)}}
+      \field{volume}{abs/1504.01459}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1504.01459
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1504.01459
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1504.01459
+      \endverb
+    \endentry
+    \entry{wikiInsert}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; accessed 23-April-2026]}
+      \field{title}{Insertion sort --- Wikipedia{,} The Free Encyclopedia}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://simple.wikipedia.org/w/index.php?title=Insertion_sort&oldid=9929001
+      \endverb
+      \verb{url}
+      \verb https://simple.wikipedia.org/w/index.php?title=Insertion_sort&oldid=9929001
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
