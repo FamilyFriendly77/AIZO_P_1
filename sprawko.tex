@@ -17,6 +17,7 @@
 \usepackage{psfrag}
 \usepackage{pgfplots}
 \usepackage{bm}
+\usepackage{array, float}
 \usepackage[style=authoryear, backend=biber]{biblatex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -36,29 +37,175 @@
 
 \begin{document}
     \maketitle
-    \section{Wprowadzenie}
-      \subsection{Cele Projektu}
-        Celem projektu było zaimplementowanie wybranych algorytmów sortowania i przeprowadzenie analizy ich efektywności.
-        Otrzymane wyniki zostały porównane z teoretyczną złożonością obliczeniową analizowanych algorytmów. Analizie został także podany wpływ danych poddanych sortowaniu na efektywność algorytmów.
-      \subsection{Algorytmy poddane analizie}
-      \subsubsection{Sortowanie przez kopcowanie}
-      Algorytm sortowanie przez kopcowanie możemy podzielić na dwie części, w pierwszej kolejności musimy sortowaną tablicę doprowadzić do poprawnej struktury kopca maksymalnego,
-      czyli takiej w której każdy węzeł jest mniejszy lub równy swojemu rodzicowi.
-      Następnie z utworzonej struktury kopca usuwamy korzeń, będący największym elementem w kopcu po czym zamieniamy go z ostatnim elementem w kopcu i zmniejszamy rozmiar kopca. Po każdym wykonaniu takiej operacji musimy przywrócić własność kopca zaczynając od nowego korzenia. 
-      \\\\Algorytm ten, składając w całość tworzenie kopca o złożoności $O(n)$ 
-      wywoływane raz oraz przywracanie własności kopca o złożności
-      $O(\log n)$ wywoływane $n$ razy, daje nam stałą teoretyczną
-      wydajność dla średniego i najgorszego przypadku w których złożoność
-      obliczeniowa jest równa $O(n \log n)$ [\cite{AverageHeapSort}] [\cite{WorstHeapSort}] 
+  \section{Wprowadzenie}
+      \subsection{Opis zadania}
+        Celem jest zaimplementowanie wybranych algorytmów sortowania i przeprowadzenie analizy ich efektywności.
+        Uzyskane w wyniku badań realne czasy sortowania dla wybranych algorytmów zostaną poddane analizie oraz porównane wyników innych algorymów.
+        Zbadany zostanie także wpływ typu danych na efektywność jednego wybranego algorytmu.
+    \subsection{Algorytmy poddane analizie}
+      Otrzymane wyniki zostały porównane z teoretyczną złożonością obliczeniową analizowanych algorytmów. Analizie został także podany wpływ danych poddanych sortowaniu na efektywność algorytmów.
+      \subsubsection{Sortowanie przez kopcowanie} 
+        Algorytm sortowanie przez kopcowanie możemy podzielić na dwie części, w pierwszej kolejności musimy sortowaną tablicę doprowadzić do poprawnej struktury kopca maksymalnego,
+        czyli takiej w której każdy węzeł jest mniejszy lub równy swojemu rodzicowi.
+        Następnie z utworzonej struktury kopca usuwamy korzeń, będący największym elementem w kopcu po czym zamieniamy go z ostatnim elementem w kopcu i zmniejszamy rozmiar kopca. Po każdym wykonaniu takiej operacji musimy przywrócić własność kopca zaczynając od nowego korzenia. 
+        \\\\Algorytm ten, składając w całość tworzenie kopca o złożoności $O(n)$ 
+        wywoływane raz oraz przywracanie własności kopca o złożności
+        $O(\log n)$ wywoływane $n$ razy, daje nam stałą teoretyczną
+        wydajność dla średniego i najgorszego przypadku w których złożoność
+        obliczeniowa jest równa $O(n \log n)$ [\cite{AverageHeapSort}] [\cite{WorstHeapSort}] 
+        \\\\Zakłada się więc, że czas sortowania dla tego algorytmu będzie stabilnie wzrastał wraz ze wzrostem wielkości badanej instancji, wykazując niewrażliwość na stopień wstępnego posortowania tablicy.
       \subsubsection{Sortowanie przez wstawianie}
-      Algorytm sortowania przez wstawianie buduje posortowaną tablicę element po elemencie. Algorytm iteruje przez całą sortowaną tablicę, każdy element jest usuwany z części tablicy do posortowania i wstawiany we właściwe miejsce w posortowanej częsci tablicy.
-      Efekt ten jest osiągany poprzez porównywanie aktualnie przenoszonego elemetnu z każdym elementem znajdującym się w posortowanej już części tablicy aż do momentu gdy nie zostanie napotkany element mniejszy niż aktualnie przenoszzony, który zostaje wstawiony w puste miejsce.
-      \\\\Rezultatem tego działania jest teoretyczna złożoność obliczeniowa w średnim i najgorszym przypadku na poziomie $O(n^2)$,
-      zaletą tego algorytmu jest jednak wydajność teoretyczna w przypadku prawie posortowanej tablicy na poziomie $O(n)$. [\cite{wikiInsert}]
+        Algorytm sortowania przez wstawianie buduje posortowaną tablicę element po elemencie. Algorytm iteruje przez całą sortowaną tablicę, każdy element jest usuwany z części tablicy do posortowania i wstawiany we właściwe miejsce w posortowanej częsci tablicy.
+        Efekt ten jest osiągany poprzez porównywanie aktualnie przenoszonego elemetnu z każdym elementem znajdującym się w posortowanej już części tablicy aż do momentu gdy nie zostanie napotkany element mniejszy niż aktualnie przenoszzony, który zostaje wstawiony w puste miejsce.
+        \\\\Rezultatem tego działania jest teoretyczna złożoność obliczeniowa w średnim i najgorszym przypadku na poziomie $O(n^2)$,
+        zaletą tego algorytmu jest jednak wydajność teoretyczna w przypadku prawie posortowanej tablicy na poziomie $O(n)$. [\cite{wikiInsert}]
+        \\\\Zakłada się więc, że wystąpią drastyczne różnice w wydajności tego algorytmu w zależności od wstępnego stopnia posortowania tablicy, dla posortowanej tablicy oczekiwana jest złożoność na poziomie $O(n)$, a dla tablicy odwrotnie posortowanej oczekiwana jest złożoność rzędu $O(n^2)$
       \subsubsection{Sortowanie szybkie}
-      Sortowanie szybkie 
-      \subsubsection{Sortowanie Shella - wyrażenie $2^k - 1$}
-      \subsubsection{Sortowanie Shella - ciąg opracowany przez Macina Ciurę}
-      \subsection{Założenia techniczne}
-      \printbibliography
+        Sortowanie szybkie jest algorytmem działającym na zasadzie "dziel i zwyciężaj",
+        polegającej na rekurencyjnym dzieleniu problemu na mniejsze podproblemy tego samego typu tak długo,
+        aż podproblemy te staną się wystarczająco proste do rozwiązania.
+        W przeciwieństwie do innych algorytmów tego typu, w sortowaniu szybkim głowne porządkowanie odbywa się w trakcie tego podziału, a nie w trakcie późniejszego scalania rozwiązań podproblemów. [\cite{wikiDziel}]
+        \\\\Z sortowanej tablicy wybierany jest element który dzieli ją na dwa fragmenty nazywany pivotem lub elementem osiowym. Do jednego przenoszone są wszystkie elementy mniejsze od wybranego elementu a do drugiego te większe.Po takim podziale element osiowy znajduje się na właściwym miejscu. 
+        Powoduje to, że wydajność tego algorytmu jest w dużej mierze zależna od wyboru tego właśnie elementu.
+        Następnie schemat ten powtarzany jest dla każdego z dwóch otrzymanych fragmentów. Powtarzanie dzielenia kończy się w momencie gdy otrzymana z podziału część posiada tylko jeden element.
+        \\\\Algorytm ten, biorąc pod uwagę jego rekursywną naturę w teoretycznym najgorszym przypadku przy złym wyborze elementu osiowego daje nam wydajność na poziomie $O(n^2)$, za to teoretyczna średnia złożoność jest na poziomie $O(n\log{n})$ 
+        \\\\Zakłada się więc, że sortowanie szybkie osiągnie najlepsze czasy dla danych losowych osiągając złożoność na poziomie $n\log{n}$, jednak przy złym doborze elementu osiowego spodziewany jest spadek nawet do okolic $O(n^2)$ 
+      \subsubsection{Sortowanie Shella - wyrażenie $2^k - 1$, ciąg opracowany przez Marcina Ciurę}
+        Algorytm sortowania Shella korzysta z porównań, działa podobnie do algorytmu sortowania przez wstawianie, jednak kluczową różnicą jest to że w algorytmie Shella porównujemy i zamieniamy najpierw elementy położone daleko od siebie, stopniowo zmniejszając tę odległość po każdym przejściu przez sortowaną tablicę.
+        \\\\Wydajność tego algorytmu zależy w głównej mierze od doboru sekwencji odstępów 
+        między elementami na których będziemy operować. W tym przypadku analizie zostaną
+        poddane dwa ciągi, pierwszy o wyrażeniu ogólnym
+        $2^k - 1$ opracowany przez Thomasa Hibbarda w 1963 r. [\cite{10.1145/366552.366557}],
+        oraz drugi wyznaczony przez Marcina Ciurę w 2001 r.
+        w postaci ${1,4,10,23,57,132,301,701}$ [\cite{CiuraShell}]
+        \\\\
+        W przypadku wyrażenia ogólnego  $2^k - 1$ teoretyczna pesymistyczna złożoność plasuje się na poziomie $O(n^{3/2})$ a złożoność średnia, zbadana doświadczalnie przez Thomasa Hibbarda, na poziomie $O(n^{1.25})$.
+        Dla ciągu opracowanego przez Marcina Ciurę nie jesteśmy jednak w stanie podać tak dokładnych oczekiwań, dla tablic o rozmiarze do 128 tys. elementów średnia wydajność osiąga wartości w okolicach od $O(n^{1.1})$ do $O(n\log^2{n})$ a szacowana pesymistyczna złożoność wynosi około $O(n^{1.5})$
+        Ciąg opracowany przez Marcina Ciurę jest o tyle wyjątkowy że został opracowany empirycznie, Autor porównywał wyniki złożoności sortowania dla małych tablic w poszukiwaniu najlepszego wyniku dla przypadku średniego.
+        \\\\Zakłada się więc, że wydajność sortowania tym Algorytmem będzie znacznie wyższa niż przy sortowaniu przez wstawianie, oraz że zastosowanie ciągu Marcina Ciury wykaże lepsze wyniki niż sekwencja Hibbarda.
+    \subsection{Charakterystyka danych badawczych}
+      Dane wykorzystane w badaniu zostały wygenerowane przy użyciu generatora liczb pseudolosowych. Podstawowym badanym typem danych jest format liczb całkowitych (int) zajmujący 4 bajty pamięci,
+      dla algorytmu sortowania szybkiego przeprowadzono także badanie stosując liczby zmiennoprzecinkowe (float, 4 bajty), liczby zmiennoprzecinkowe podwójnej precyzji (double, 8 bajtów), oraz znaki ASCII (char, 1 bajt).
+      Badanie każdego algorytmu zostało przeprowadzone na tych samych instancjach tablic aby mieć możliwość porównania wyników między badanymi algorytmami.
+      \\\\W badaniu uwzględniono pięć rodzajów rozkładu danych w tablicach:
+      \begin{itemize}
+        \item Dane losowe - zakres od 0 do 2,147,483,647
+        \item Dane posortowane w 33\% - posrotowana część wypełniona zerami, reszta tablicy losowa w zakresie od 1 do 2,147,483,647
+        \item Dane posortowane w 66\% - posrotowana część wypełniona zerami, reszta tablicy losowa w zakresie od 1 do 2,147,483,647
+        \item Dane posortowane rosnąco - tablica wypełniona liczbami od 1 do rozmiaru tablicy
+        \item Dane posortowane malejąco - tablica wypełniona liczbami od rozmiaru tablicy do 1
+      \end{itemize}  
+      Do badania wybrano siedem instancji o rozmiarach od $5 \cdot 10^3$ do $5 \cdot 10^4$ elementów. Wybór ten został podyktowany faktem że dolny próg jest wystarczająco duży aby można zmierzyć dokładnie czas sortowania, a górny próg pozwala na wyraźne zaobserwowanie różnicy między algorytmami, co pozwala na weryfikację postawionych hipotez.
+      Taki dobór wielkości instancji pozwala jednocześnie uniknąć problemów związanych z przepełnieniem stosu na wykorzystanym do przeprowadzenia badań sprzęcie.
+  \section{Warunki badawcze}
+    \subsection{Środowisko badawcze}
+      Badanie zostało przeprowadzone za pomocą autorskiego oprogramowania napisanego w języku C++, skompilowanego za pomocą kompilatora Apple Clang w wersji 17.0.0 ,zgodnie ze standardem C++20, stosując standardową konfigurację.
+      Specyfikacja platformy badawczej:
+      \begin{itemize}
+        \item \textbf{Procesor:} Apple M4, 10 rdzeni (4 rdzenie wydajnościowe, 6 rdzeni energooszczędnych)
+      \item \textbf{Pamięć operacyjna:} 16 GB zunifikowanej pamięci RAM
+      \item \textbf{System operacyjny:} macOS Tahoe 26.3.1
+        \item \textbf{Chłodzenie:} brak aktywnego chłodzenia - w czasie testów monitorowano temperaturę za pomocą zewnętrznego oprogramowania aby uniknąć ograniczenia wydajności z powodu zbyt wysokiej temperatury
+      \item \textbf{Zasilanie:} zasilanie sieciowe, połączenie MagSafe o mocy 35W aby zagwarantować stały limit poboru mocy
+        \item \textbf{Izolacja procesu:} Proces został przypisany do rdzeni wydajnościowych przy użyciu narzędzi dostępnych w systemie macOS (Quality of Service: User Interactive), poprzez nadanie mu wysokiego priorytetu za pomocą narzędzia nice za pomocą polecenia \textit{nice -n -20 $<scieżka do programu>$} 
+        \item \textbf{Dokładny model urządzenia:} Apple A3241
+      \end{itemize}
+    \subsection{Instancje Badawcze}
+    W Tab. \ref{tab:instancje} przedstawiono parametry wykorzystanych instancji badawczych do badania wszystkich
+    algorytmów, a w Tab. \ref{tab:instancje2} przedstawiono dodatkowe zestawienie instancji dla algorytmu
+    quicksort przeznaczone do badania wpływu typu danych na czas sortowania tablicy.
+    Badanie każdej wielkości instancji powtórzono 100 razy aby ograniczyć wpływ potencjalnych
+    błędów grubych podczas obliczania średniego czasu sortowania dla każdej instancji oraz osiągnąć statystycznie reprezentatywny wynik.
+    \vspace{2 pt}
+    \clearpage
+    \begin{table}[h]
+    \centering
+    \caption{Wykaz i charakterystyka instancji badanych dla wszystkich algorytmów.}
+    \label{tab:instancje}
+    \begin{tabular}{|l|c|p{7cm}|c|}
+      \hline
+    \textbf{Lp.} & \textbf{Rozmiar ($N$)} & \textbf{Rodzaje rozkładu danych} & \textbf{Format danych} \\ \hline
+    1 & 5 000  & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{int} \\ \hline
+    2 & 10 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{int} \\ \hline
+    3 & 15 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{int} \\ \hline
+    4 & 20 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{int} \\ \hline
+    5 & 30 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{int} \\ \hline
+    6 & 40 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{int} \\ \hline
+    7 & 50 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{int} \\ \hline
+    \end{tabular}
+    \small Źródło: opracowanie własne
+  \end{table}
+  \vspace{2 pt}
+  \begin{table}[h]
+    \centering
+    \caption{Wykaz i charakterystyka dodatkowych instancji badanych dla sortowania szybkiego.}
+    \label{tab:instancje2}
+    \begin{tabular}{|l|c|p{7cm}|c|}
+      \hline
+    \textbf{Lp.} & \textbf{Rozmiar ($N$)} & \textbf{Rodzaje rozkładu danych} & \textbf{Format danych} \\ \hline
+    1 & 5 000  & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{float, double, char} \\ \hline
+    2 & 10 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{float, double, char} \\ \hline
+    3 & 15 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{float, double, char} \\ \hline
+    4 & 20 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{float, double, char} \\ \hline
+    5 & 30 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{float, double, char} \\ \hline
+    6 & 40 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{float, double, char} \\ \hline
+    7 & 50 000 & losowy, posortowany (33\%, 66\%, 100\%), odwrotny & \texttt{float, double, char} \\ \hline
+    \end{tabular}
+    \small Źródło: opracowanie własne
+  \end{table} 
+  \clearpage
+  \section{Opis procedury badawczej}
+    Procedura pomiarowa zakłada,
+    że przypisanie procesowi wysokiego priorytetu systemowego zagwarantuje możliwie
+    najstabilniejsze działanie programu i odizoluje go od wpływu innych procesów.
+    Proces badawczy wykorzystywał bibliotekę \texttt{std::chrono},
+    stosując zegar o wysokiej rozdzielczości \texttt{high\_resolution\_clock}.
+    Wybór tego rozwiązania podyktowany był bardzo wysoką precyzją zegara,
+    co jest kluczowe przy mierzeniu czasu niezwykle szybkich operacji sortowania.
+    Pomiar obejmował wyłącznie właściwe operacje sortowania danych.
+    Aby uniknąć przekłamania wyników przez czas generowania danych lub alokacji pamięci,
+    algorytmy działały na wcześniej skopiowanych instancjach tablic.
+    Weryfikacja poprawności sortowania,
+    alokacja pamięci oraz kopiowanie danych były przeprowadzane poza mierzonym interwałem
+    czasowym. Dla każdego rozmiaru instancji generowano i sortowano 100 różnych zestawów
+    danych w celu uśrednienia wyników serii pomiarowej.
+    Wynik końcowy prezentowany w analizie stanowi średnią arytmetyczną z wykonanych prób,
+    co pozwoliło uzyskać statystycznie reprezentatywny wynik.
+    W przeprowadzonym badaniu poprawność sortowania była monitorowana dla każdego pomiaru;
+    wszystkie testy zakończyły się sukcesem,
+    w związku z czym przypadek błędu w sortowaniu nie jest brany pod uwagę w dalszej analizie.
+\section{Wyniki i ich analiza}
+
+\begin{table}[H]
+    \centering
+    % 1. PODPIS NAD TABELĄ
+    \caption{Zestawienie średnich czasów sortowania [ms] dla danych o rozkładzie losowym.}
+    \label{tab:wyniki_losowe}
+    
+    \renewcommand{\arraystretch}{1.4} % Większy odstęp dla czytelności
+    \small % Mniejsza czcionka, żeby tabela na pewno zmieściła się w marginesach
+    
+    % Definicja kolumn: m{szerokość} centruje w pionie, >{\centering...} w poziomie
+    \begin{tabular}{|>{\centering\arraybackslash}m{1.5cm}|*{5}{>{\centering\arraybackslash}m{2.2cm}|}}
+    \hline
+    \textbf{Rozmiar} ($N$) & \textbf{Selection Sort} & \textbf{Insertion Sort} & \textbf{Heap Sort} & \textbf{Shell Sort} & \textbf{Quick Sort} \\ \hline
+    
+    % Wstawianie danych: używaj zapisu wykładniczego tam, gdzie liczby są bardzo małe lub duże
+    5 000  & $4,12 \cdot 10^1$ & $2,45 \cdot 10^1$ & $1,12 \cdot 10^0$ & $2,10 \cdot 10^0$ & $8,45 \cdot 10^{-1}$ \\ \hline
+    10 000 & $1,65 \cdot 10^2$ & $9,82 \cdot 10^1$ & $2,45 \cdot 10^0$ & $4,56 \cdot 10^0$ & $1,82 \cdot 10^0$ \\ \hline
+    15 000 & $3,71 \cdot 10^2$ & $2,21 \cdot 10^2$ & $3,84 \cdot 10^0$ & $7,32 \cdot 10^0$ & $2,91 \cdot 10^0$ \\ \hline
+    20 000 & $6,58 \cdot 10^2$ & $3,94 \cdot 10^2$ & $5,21 \cdot 10^0$ & $1,05 \cdot 10^1$ & $4,12 \cdot 10^0$ \\ \hline
+    30 000 & $1,48 \cdot 10^3$ & $8,85 \cdot 10^2$ & $8,14 \cdot 10^0$ & $1,68 \cdot 10^1$ & $6,58 \cdot 10^0$ \\ \hline
+    40 000 & $2,64 \cdot 10^3$ & $1,58 \cdot 10^3$ & $1,12 \cdot 10^1$ & $2,41 \cdot 10^1$ & $9,12 \cdot 10^0$ \\ \hline
+    50 000 & $4,12 \cdot 10^3$ & $2,46 \cdot 10^3$ & $1,45 \cdot 10^1$ & $3,15 \cdot 10^1$ & $1,21 \cdot 10^1$ \\ \hline
+    
+    \end{tabular}
+    
+    \vspace{2pt}
+    % 2. ŹRÓDŁO POD TABELĄ
+    \small Źródło: opracowanie własne na podstawie przeprowadzonych badań.
+\end{table}
+
+    \clearpage
+\printbibliography
 \end{document}

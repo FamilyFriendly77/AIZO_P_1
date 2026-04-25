@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.22)  24 APR 2026 00:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.22)  25 APR 2026 23:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -921,12 +921,30 @@ Package bm Info: No bold for \U/msa/m/n, using \pmb.
 Package bm Info: No bold for \U/msb/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 )
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen321
+\ar@mcellbox=\box75
+\extrarowheight=\dimen322
+\NC@list=\toks52
+\extratabsurround=\skip128
+\backup@length=\skip129
+\ar@cellbox=\box76
+)
+(C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count352
+\float@exts=\toks53
+\float@box=\box77
+\@float@everytoks=\toks54
+\@floatcapt=\box78
+)
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count352
+\lrq@indent=\count353
 
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -938,63 +956,63 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count353
-\c@listtotal=\count354
-\c@listcount=\count355
-\c@liststart=\count356
-\c@liststop=\count357
-\c@citecount=\count358
-\c@citetotal=\count359
-\c@multicitecount=\count360
-\c@multicitetotal=\count361
-\c@instcount=\count362
-\c@maxnames=\count363
-\c@minnames=\count364
-\c@maxitems=\count365
-\c@minitems=\count366
-\c@citecounter=\count367
-\c@maxcitecounter=\count368
-\c@savedcitecounter=\count369
-\c@uniquelist=\count370
-\c@uniquename=\count371
-\c@refsection=\count372
-\c@refsegment=\count373
-\c@maxextratitle=\count374
-\c@maxextratitleyear=\count375
-\c@maxextraname=\count376
-\c@maxextradate=\count377
-\c@maxextraalpha=\count378
-\c@abbrvpenalty=\count379
-\c@highnamepenalty=\count380
-\c@lownamepenalty=\count381
-\c@maxparens=\count382
-\c@parenlevel=\count383
-\blx@tempcnta=\count384
-\blx@tempcntb=\count385
-\blx@tempcntc=\count386
-\c@blx@maxsection=\count387
-\blx@maxsegment@0=\count388
-\blx@notetype=\count389
-\blx@parenlevel@text=\count390
-\blx@parenlevel@foot=\count391
-\blx@sectionciteorder@0=\count392
-\blx@sectionciteorderinternal@0=\count393
-\blx@entrysetcounter=\count394
-\blx@biblioinstance=\count395
-\labelnumberwidth=\skip128
-\labelalphawidth=\skip129
-\biblabelsep=\skip130
-\bibitemsep=\skip131
-\bibnamesep=\skip132
-\bibinitsep=\skip133
-\bibparsep=\skip134
-\bibhang=\skip135
+\c@tabx@nest=\count354
+\c@listtotal=\count355
+\c@listcount=\count356
+\c@liststart=\count357
+\c@liststop=\count358
+\c@citecount=\count359
+\c@citetotal=\count360
+\c@multicitecount=\count361
+\c@multicitetotal=\count362
+\c@instcount=\count363
+\c@maxnames=\count364
+\c@minnames=\count365
+\c@maxitems=\count366
+\c@minitems=\count367
+\c@citecounter=\count368
+\c@maxcitecounter=\count369
+\c@savedcitecounter=\count370
+\c@uniquelist=\count371
+\c@uniquename=\count372
+\c@refsection=\count373
+\c@refsegment=\count374
+\c@maxextratitle=\count375
+\c@maxextratitleyear=\count376
+\c@maxextraname=\count377
+\c@maxextradate=\count378
+\c@maxextraalpha=\count379
+\c@abbrvpenalty=\count380
+\c@highnamepenalty=\count381
+\c@lownamepenalty=\count382
+\c@maxparens=\count383
+\c@parenlevel=\count384
+\blx@tempcnta=\count385
+\blx@tempcntb=\count386
+\blx@tempcntc=\count387
+\c@blx@maxsection=\count388
+\blx@maxsegment@0=\count389
+\blx@notetype=\count390
+\blx@parenlevel@text=\count391
+\blx@parenlevel@foot=\count392
+\blx@sectionciteorder@0=\count393
+\blx@sectionciteorderinternal@0=\count394
+\blx@entrysetcounter=\count395
+\blx@biblioinstance=\count396
+\labelnumberwidth=\skip130
+\labelalphawidth=\skip131
+\biblabelsep=\skip132
+\bibitemsep=\skip133
+\bibnamesep=\skip134
+\bibinitsep=\skip135
+\bibparsep=\skip136
+\bibhang=\skip137
 \blx@bcfin=\read3
 \blx@bcfout=\write5
 \blx@langwohyphens=\language79
-\c@mincomprange=\count396
-\c@maxcomprange=\count397
-\c@mincompwidth=\count398
+\c@mincomprange=\count397
+\c@maxcomprange=\count398
+\c@mincompwidth=\count399
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1005,88 +1023,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count399
-\c@savedafterword=\count400
-\c@annotator=\count401
-\c@savedannotator=\count402
-\c@author=\count403
-\c@savedauthor=\count404
-\c@bookauthor=\count405
-\c@savedbookauthor=\count406
-\c@commentator=\count407
-\c@savedcommentator=\count408
-\c@editor=\count409
-\c@savededitor=\count410
-\c@editora=\count411
-\c@savededitora=\count412
-\c@editorb=\count413
-\c@savededitorb=\count414
-\c@editorc=\count415
-\c@savededitorc=\count416
-\c@foreword=\count417
-\c@savedforeword=\count418
-\c@holder=\count419
-\c@savedholder=\count420
-\c@introduction=\count421
-\c@savedintroduction=\count422
-\c@namea=\count423
-\c@savednamea=\count424
-\c@nameb=\count425
-\c@savednameb=\count426
-\c@namec=\count427
-\c@savednamec=\count428
-\c@translator=\count429
-\c@savedtranslator=\count430
-\c@shortauthor=\count431
-\c@savedshortauthor=\count432
-\c@shorteditor=\count433
-\c@savedshorteditor=\count434
-\c@labelname=\count435
-\c@savedlabelname=\count436
-\c@institution=\count437
-\c@savedinstitution=\count438
-\c@lista=\count439
-\c@savedlista=\count440
-\c@listb=\count441
-\c@savedlistb=\count442
-\c@listc=\count443
-\c@savedlistc=\count444
-\c@listd=\count445
-\c@savedlistd=\count446
-\c@liste=\count447
-\c@savedliste=\count448
-\c@listf=\count449
-\c@savedlistf=\count450
-\c@location=\count451
-\c@savedlocation=\count452
-\c@organization=\count453
-\c@savedorganization=\count454
-\c@origlocation=\count455
-\c@savedoriglocation=\count456
-\c@origpublisher=\count457
-\c@savedorigpublisher=\count458
-\c@publisher=\count459
-\c@savedpublisher=\count460
-\c@language=\count461
-\c@savedlanguage=\count462
-\c@origlanguage=\count463
-\c@savedoriglanguage=\count464
-\c@pageref=\count465
-\c@savedpageref=\count466
-\shorthandwidth=\skip136
-\shortjournalwidth=\skip137
-\shortserieswidth=\skip138
-\shorttitlewidth=\skip139
-\shortauthorwidth=\skip140
-\shorteditorwidth=\skip141
-\locallabelnumberwidth=\skip142
-\locallabelalphawidth=\skip143
-\localshorthandwidth=\skip144
-\localshortjournalwidth=\skip145
-\localshortserieswidth=\skip146
-\localshorttitlewidth=\skip147
-\localshortauthorwidth=\skip148
-\localshorteditorwidth=\skip149
+\c@afterword=\count400
+\c@savedafterword=\count401
+\c@annotator=\count402
+\c@savedannotator=\count403
+\c@author=\count404
+\c@savedauthor=\count405
+\c@bookauthor=\count406
+\c@savedbookauthor=\count407
+\c@commentator=\count408
+\c@savedcommentator=\count409
+\c@editor=\count410
+\c@savededitor=\count411
+\c@editora=\count412
+\c@savededitora=\count413
+\c@editorb=\count414
+\c@savededitorb=\count415
+\c@editorc=\count416
+\c@savededitorc=\count417
+\c@foreword=\count418
+\c@savedforeword=\count419
+\c@holder=\count420
+\c@savedholder=\count421
+\c@introduction=\count422
+\c@savedintroduction=\count423
+\c@namea=\count424
+\c@savednamea=\count425
+\c@nameb=\count426
+\c@savednameb=\count427
+\c@namec=\count428
+\c@savednamec=\count429
+\c@translator=\count430
+\c@savedtranslator=\count431
+\c@shortauthor=\count432
+\c@savedshortauthor=\count433
+\c@shorteditor=\count434
+\c@savedshorteditor=\count435
+\c@labelname=\count436
+\c@savedlabelname=\count437
+\c@institution=\count438
+\c@savedinstitution=\count439
+\c@lista=\count440
+\c@savedlista=\count441
+\c@listb=\count442
+\c@savedlistb=\count443
+\c@listc=\count444
+\c@savedlistc=\count445
+\c@listd=\count446
+\c@savedlistd=\count447
+\c@liste=\count448
+\c@savedliste=\count449
+\c@listf=\count450
+\c@savedlistf=\count451
+\c@location=\count452
+\c@savedlocation=\count453
+\c@organization=\count454
+\c@savedorganization=\count455
+\c@origlocation=\count456
+\c@savedoriglocation=\count457
+\c@origpublisher=\count458
+\c@savedorigpublisher=\count459
+\c@publisher=\count460
+\c@savedpublisher=\count461
+\c@language=\count462
+\c@savedlanguage=\count463
+\c@origlanguage=\count464
+\c@savedoriglanguage=\count465
+\c@pageref=\count466
+\c@savedpageref=\count467
+\shorthandwidth=\skip138
+\shortjournalwidth=\skip139
+\shortserieswidth=\skip140
+\shorttitlewidth=\skip141
+\shortauthorwidth=\skip142
+\shorteditorwidth=\skip143
+\locallabelnumberwidth=\skip144
+\locallabelalphawidth=\skip145
+\localshorthandwidth=\skip146
+\localshortjournalwidth=\skip147
+\localshortserieswidth=\skip148
+\localshorttitlewidth=\skip149
+\localshortauthorwidth=\skip150
+\localshorteditorwidth=\skip151
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1097,19 +1115,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count467
-\c@textcitetotal=\count468
-\c@textcitemaxnames=\count469
-\c@biburlbigbreakpenalty=\count470
-\c@biburlbreakpenalty=\count471
-\c@biburlnumpenalty=\count472
-\c@biburlucpenalty=\count473
-\c@biburllcpenalty=\count474
+\c@textcitecount=\count468
+\c@textcitetotal=\count469
+\c@textcitemaxnames=\count470
+\c@biburlbigbreakpenalty=\count471
+\c@biburlbreakpenalty=\count472
+\c@biburlnumpenalty=\count473
+\c@biburlucpenalty=\count474
+\c@biburllcpenalty=\count475
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count475
+\c@smartand=\count476
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
@@ -1123,8 +1141,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
 bx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count476
-\c@bbx:relatedtotal=\count477
+\c@bbx:relatedcount=\count477
+\c@bbx:relatedtotal=\count478
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
@@ -1157,27 +1175,27 @@ Package biblatex Info: ... and expl3
 .sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
-\@quotelevel=\count478
-\@quotereset=\count479
+\@quotelevel=\count479
+\@quotereset=\count480
  (sprawko.aux)
 \openout1 = `sprawko.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1217,17 +1235,17 @@ LaTeX Font Info:    ... okay on input line 37.
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count480
-\scratchdimen=\dimen321
-\scratchbox=\box75
-\nofMPsegments=\count481
-\nofMParguments=\count482
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count483
-\MPscratchDim=\dimen322
-\MPnumerator=\count484
-\makeMPintoPDFobject=\count485
-\everyMPtoPDFconversion=\toks53
+\scratchcounter=\count481
+\scratchdimen=\dimen323
+\scratchbox=\box79
+\nofMPsegments=\count482
+\nofMParguments=\count483
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count484
+\MPscratchDim=\dimen324
+\MPnumerator=\count485
+\makeMPintoPDFobject=\count486
+\everyMPtoPDFconversion=\toks56
 )
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -1239,13 +1257,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\Hy@linkcounter=\count486
+\Hy@linkcounter=\count487
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 37.
+ on input line 38.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -1269,56 +1287,66 @@ Package biblatex Warning: Biber reported the following issues
  Invalid format '1987/03/01' of date field 'date' - ignoring.
 
 )
-Package biblatex Info: Reference section=0 on input line 37.
-Package biblatex Info: Reference segment=0 on input line 37.
+Package biblatex Info: Reference section=0 on input line 38.
+Package biblatex Info: Reference segment=0 on input line 38.
 LaTeX Font Info:    Trying to load font information for OML+plm on input line 3
-8.
+9.
  (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/polski\omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 
-38.
+39.
 
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/polski\omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMX+plex on input line 
-38.
+39.
 
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/polski\omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 38.
+(Font)              <12> on input line 39.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 38.
+(Font)              <8> on input line 39.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 38.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+(Font)              <6> on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
 
 
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
 
 
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 48.
+(Font)              <10> on input line 51.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 48.
+(Font)              <7> on input line 51.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 48.
+(Font)              <5> on input line 51.
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--53
+Underfull \hbox (badness 10000) in paragraph at lines 48--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--58
+Underfull \hbox (badness 10000) in paragraph at lines 48--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
 
  []
 
@@ -1329,16 +1357,72 @@ Non-PDF special ignored!
 {C:/Users/kryst/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/krys
 t/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc}{C:/Users/kryst/App
 Data/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plmi.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 64--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--86
+
+ []
+
+[2{C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plms.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 87--91
+
+ []
+
+[3]
+
+LaTeX Warning: Command \. invalid in math mode on input line 110.
+
+Missing character: There is no » in font plmi10!
+[4{C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plit.enc}]
 LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
-63.
+128.
 
 (C:\Users\kryst\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-[2{C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plms.enc}{C:
-/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plit.enc}{C:/User
-s/kryst/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plsc.enc}{C:/Users/kry
-st/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/pltt.enc}] (sprawko.aux)
+Overfull \hbox (11.65738pt too wide) in paragraph at lines 143--155
+ [][] 
+ []
+
+[5
+
+{C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/pltt.enc}]
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <9> on input line 189.
+
+Overfull \hbox (12.20522pt too wide) in paragraph at lines 189--203
+ [][] 
+ []
+
+[6
+
+] [7
+
+{C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plsc.enc}] (sp
+rawko.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1348,28 +1432,35 @@ Package logreq Info: Writing requests to 'sprawko.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34620 strings out of 467871
- 832661 string characters out of 5418376
- 1836397 words of memory out of 5000000
- 62927 multiletter control sequences out of 15000+600000
- 648301 words of font info for 100 fonts, out of 8000000 for 9000
+ 34806 strings out of 467871
+ 835749 string characters out of 5418376
+ 1846502 words of memory out of 5000000
+ 63101 multiletter control sequences out of 15000+600000
+ 651588 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,6n,118p,1262b,1262s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plbx10.pf
-b><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plbx12.pf
-b><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plcsc10.p
-fb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi10.p
-fb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi7.pf
-b><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr10.pfb
-><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr12.pfb>
-<C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr17.pfb><
-C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr7.pfb><C:
+ 99i,12n,118p,1262b,1270s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\kryst\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1000.pk><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plb
+x10.pfb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plb
+x12.pfb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plb
+x9.pfb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plcs
+c10.pfb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plm
+i10.pfb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plm
+i7.pfb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plmi
+9.pfb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr10
+.pfb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr12.
+pfb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr17.p
+fb><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr6.pfb
+><C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr7.pfb><
+C:/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr9.pfb><C:
 /Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plsy10.pfb><C:
-/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plti10.pfb><C:
-/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/pltt10.pfb>
-Output written on sprawko.pdf (2 pages, 103389 bytes).
+/Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plsy6.pfb><C:/
+Users/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plsy9.pfb><C:/U
+sers/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/plti10.pfb><C:/U
+sers/kryst/AppData/Local/Programs/MiKTeX/fonts/type1/public/pl/pltt10.pfb>
+Output written on sprawko.pdf (7 pages, 167381 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
+ 130 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

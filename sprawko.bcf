@@ -2377,6 +2377,9 @@
     <bcf:citekey order="1" intorder="1">AverageHeapSort</bcf:citekey>
     <bcf:citekey order="2" intorder="1">WorstHeapSort</bcf:citekey>
     <bcf:citekey order="3" intorder="1">wikiInsert</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">wikiDziel</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">10.1145/366552.366557</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">CiuraShell</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -62,6 +62,86 @@
       \endverb
       \warn{\item article entry 'AverageHeapSort' (bibliografia.bib): Invalid format '1987/03/01' of date field 'date' - ignoring}
     \endentry
+    \entry{CiuraShell}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1f0fde5d02b7411577a0a3d78c07599f}{%
+           family={Ciura},
+           familyi={C\bibinitperiod},
+           given={Marcin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1f0fde5d02b7411577a0a3d78c07599f}
+      \strng{fullhash}{1f0fde5d02b7411577a0a3d78c07599f}
+      \strng{fullhashraw}{1f0fde5d02b7411577a0a3d78c07599f}
+      \strng{bibnamehash}{1f0fde5d02b7411577a0a3d78c07599f}
+      \strng{authorbibnamehash}{1f0fde5d02b7411577a0a3d78c07599f}
+      \strng{authornamehash}{1f0fde5d02b7411577a0a3d78c07599f}
+      \strng{authorfullhash}{1f0fde5d02b7411577a0a3d78c07599f}
+      \strng{authorfullhashraw}{1f0fde5d02b7411577a0a3d78c07599f}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Best Increments for the Average Case of Shellsort}
+      \field{year}{2001}
+      \verb{urlraw}
+      \verb Best Increments for the Average Case of Shellsort
+      \endverb
+      \verb{url}
+      \verb Best%20Increments%20for%20the%20Average%20Case%20of%20Shellsort
+      \endverb
+    \endentry
+    \entry{10.1145/366552.366557}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4b7a5bc57ffb46c202ccd142c11048a2}{%
+           family={Hibbard},
+           familyi={H\bibinitperiod},
+           given={Thomas\bibnamedelima N.},
+           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{fullhash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{fullhashraw}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{bibnamehash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{authorbibnamehash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{authornamehash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{authorfullhash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{authorfullhashraw}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{An empirical study of minimal storage sorting}
+      \field{volume}{6}
+      \field{year}{1963}
+      \field{pages}{206\bibrangedash 213}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/366552.366557
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/366552.366557
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/366552.366557
+      \endverb
+    \endentry
     \entry{WorstHeapSort}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=42abc0f429d03819d28833295baeb483}{%
@@ -114,6 +194,7 @@
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{1}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
@@ -128,6 +209,37 @@
       \endverb
       \verb{url}
       \verb https://simple.wikipedia.org/w/index.php?title=Insertion_sort&oldid=9929001
+      \endverb
+    \endentry
+    \entry{wikiDziel}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[dostęp: 2026-04-24 21:06Z]}
+      \field{title}{{Dziel i zwyciężaj} [online]. Wikipedia : wolna encyklopedia}
+      \field{year}{2026-04-01 12:27Z}
+      \verb{urlraw}
+      \verb pl.wikipedia.org/wiki/Dziel_i_zwyci%C4%99%C5%BCaj?oldid=79446176
+      \endverb
+      \verb{url}
+      \verb pl.wikipedia.org/wiki/Dziel_i_zwyci%C4%99%C5%BCaj?oldid=79446176
       \endverb
     \endentry
   \enddatalist
