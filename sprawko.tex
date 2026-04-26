@@ -85,7 +85,7 @@
         \\\\Zakłada się więc, że wydajność sortowania tym Algorytmem będzie znacznie wyższa niż przy sortowaniu przez wstawianie, oraz że zastosowanie ciągu Marcina Ciury wykaże lepsze wyniki niż sekwencja Hibbarda.
     \subsection{Charakterystyka danych badawczych}
       Dane wykorzystane w badaniu zostały wygenerowane przy użyciu generatora liczb pseudolosowych. Podstawowym badanym typem danych jest format liczb całkowitych (int) zajmujący 4 bajty pamięci,
-      dla algorytmu sortowania szybkiego przeprowadzono także badanie stosując liczby zmiennoprzecinkowe (float, 4 bajty), liczby zmiennoprzecinkowe podwójnej precyzji (double, 8 bajtów), oraz znaki ASCII (char, 1 bajt).
+      dla algorytmu sortowania przez kopcowanie przeprowadzono także badanie stosując liczby zmiennoprzecinkowe (float, 4 bajty), liczby zmiennoprzecinkowe podwójnej precyzji (double, 8 bajtów), oraz znaki ASCII (char, 1 bajt).
       Badanie każdego algorytmu zostało przeprowadzone na tych samych instancjach tablic aby mieć możliwość porównania wyników między badanymi algorytmami.
       \\\\W badaniu uwzględniono pięć rodzajów rozkładu danych w tablicach:
       \begin{itemize}
@@ -111,9 +111,9 @@
         \item \textbf{Dokładny model urządzenia:} Apple A3241
       \end{itemize}
     \subsection{Instancje Badawcze}
-    W Tab. \ref{tab:instancje} przedstawiono parametry wykorzystanych instancji badawczych do badania wszystkich
-    algorytmów, a w Tab. \ref{tab:instancje2} przedstawiono dodatkowe zestawienie instancji dla algorytmu
-    quicksort przeznaczone do badania wpływu typu danych na czas sortowania tablicy.
+    W Tab. \ref{tab:instancje} przedstawiono parametry wykorzystanych instancji badawczych do badania wydajności wszystkich
+    algorytmów oraz do badania wpływu doboru elementu osiowego w algorytmie sortowania szybkiego, a w Tab. \ref{tab:instancje2} przedstawiono dodatkowe zestawienie instancji dla algorytmu
+    sortowania przez kopcowanie przeznaczone do badania wpływu typu danych na czas sortowania tablicy.
     Badanie każdej wielkości instancji powtórzono 100 razy aby ograniczyć wpływ potencjalnych
     błędów grubych podczas obliczania średniego czasu sortowania dla każdej instancji oraz osiągnąć statystycznie reprezentatywny wynik.
     \vspace{2 pt}
